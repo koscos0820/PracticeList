@@ -1,0 +1,75 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="15705" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="rSO-SE-Q7C">
+    <device id="retina6_1" orientation="portrait" appearance="light"/>
+    <dependencies>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="15706"/>
+        <capability name="Safe area layout guides" minToolsVersion="9.0"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <scenes>
+        <!--Navigation Controller-->
+        <scene sceneID="2kJ-3v-LbJ">
+            <objects>
+                <navigationController id="rSO-SE-Q7C" sceneMemberID="viewController">
+                    <navigationBar key="navigationBar" contentMode="scaleToFill" insetsLayoutMarginsFromSafeArea="NO" id="e8E-dY-7Nq">
+                        <rect key="frame" x="0.0" y="44" width="414" height="44"/>
+                        <autoresizingMask key="autoresizingMask"/>
+                    </navigationBar>
+                    <connections>
+                        <segue destination="nwO-zH-gVl" kind="relationship" relationship="rootViewController" id="gfJ-xN-gLX"/>
+                    </connections>
+                </navigationController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="LTQ-5A-zge" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="-813" y="102"/>
+        </scene>
+        <!--Qiita Main View Controller-->
+        <scene sceneID="Q0Y-Xd-KFr">
+            <objects>
+                <viewController id="nwO-zH-gVl" customClass="QiitaMainViewController" customModule="PracticeList" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="1RO-mp-X9v">
+                        <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <tableView clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="-1" estimatedRowHeight="-1" sectionHeaderHeight="28" sectionFooterHeight="28" translatesAutoresizingMaskIntoConstraints="NO" id="6eR-ID-amz">
+                                <rect key="frame" x="0.0" y="88" width="414" height="774"/>
+                                <color key="backgroundColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
+                            </tableView>
+                        </subviews>
+                        <color key="backgroundColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
+                        <constraints>
+                            <constraint firstItem="6eR-ID-amz" firstAttribute="top" secondItem="TjF-Fp-g7B" secondAttribute="top" id="61K-wU-LCx"/>
+                            <constraint firstItem="TjF-Fp-g7B" firstAttribute="trailing" secondItem="6eR-ID-amz" secondAttribute="trailing" id="D5Z-4I-q7e"/>
+                            <constraint firstItem="TjF-Fp-g7B" firstAttribute="bottom" secondItem="6eR-ID-amz" secondAttribute="bottom" id="Luv-3m-642"/>
+                            <constraint firstItem="6eR-ID-amz" firstAttribute="leading" secondItem="TjF-Fp-g7B" secondAttribute="leading" id="SqH-4L-qhL"/>
+                        </constraints>
+                        <viewLayoutGuide key="safeArea" id="TjF-Fp-g7B"/>
+                    </view>
+                    <navigationItem key="navigationItem" id="yoS-GS-e4R">
+                        <barButtonItem key="leftBarButtonItem" title="閉じる" id="Dkb-H7-CKo">
+                            <connections>
+                                <action selector="returnButton:" destination="nwO-zH-gVl" id="rid-fl-Vps"/>
+                            </connections>
+                        </barButtonItem>
+                    </navigationItem>
+                    <connections>
+                        <outlet property="topTableView" destination="6eR-ID-amz" id="UiW-mQ-sR8"/>
+                        <segue destination="YZh-Ps-570" kind="push" identifier="toList" id="O0d-Fu-0vk"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="4J9-rv-qwI" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="199" y="102"/>
+        </scene>
+        <!--QiitaList-->
+        <scene sceneID="iRz-mm-k2N">
+            <objects>
+                <viewControllerPlaceholder storyboardName="QiitaList" id="YZh-Ps-570" sceneMemberID="viewController">
+                    <navigationItem key="navigationItem" id="f2H-Cy-pNd"/>
+                </viewControllerPlaceholder>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="lbE-zK-Cv0" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="1191" y="102"/>
+        </scene>
+    </scenes>
+</document>

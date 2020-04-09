@@ -1,0 +1,80 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="15705" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="sH9-9C-kqB">
+    <device id="retina6_1" orientation="portrait" appearance="light"/>
+    <dependencies>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="15706"/>
+        <capability name="Safe area layout guides" minToolsVersion="9.0"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <scenes>
+        <!--Navigation Controller-->
+        <scene sceneID="UKx-Jh-RaZ">
+            <objects>
+                <navigationController id="sH9-9C-kqB" sceneMemberID="viewController">
+                    <navigationBar key="navigationBar" contentMode="scaleToFill" insetsLayoutMarginsFromSafeArea="NO" id="mCr-9f-7e4">
+                        <rect key="frame" x="0.0" y="44" width="414" height="44"/>
+                        <autoresizingMask key="autoresizingMask"/>
+                    </navigationBar>
+                    <connections>
+                        <segue destination="lEm-Tq-3WU" kind="relationship" relationship="rootViewController" id="i9M-de-V20"/>
+                    </connections>
+                </navigationController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="ieW-ax-nj5" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="-516" y="138"/>
+        </scene>
+        <!--Omikuji Stage Select-->
+        <scene sceneID="Q5g-ip-fx8">
+            <objects>
+                <viewController id="lEm-Tq-3WU" customClass="OmikujiStageSelect" customModule="PracticeList" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="cwj-Hf-rqa">
+                        <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <tableView clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="-1" estimatedRowHeight="-1" sectionHeaderHeight="28" sectionFooterHeight="28" translatesAutoresizingMaskIntoConstraints="NO" id="Lbu-cx-QHk">
+                                <rect key="frame" x="0.0" y="88" width="414" height="774"/>
+                                <color key="backgroundColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
+                            </tableView>
+                        </subviews>
+                        <color key="backgroundColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
+                        <constraints>
+                            <constraint firstItem="1N0-G2-tQL" firstAttribute="bottom" secondItem="Lbu-cx-QHk" secondAttribute="bottom" id="9zN-yv-x2N"/>
+                            <constraint firstItem="Lbu-cx-QHk" firstAttribute="leading" secondItem="1N0-G2-tQL" secondAttribute="leading" id="H2B-aa-P2l"/>
+                            <constraint firstItem="Lbu-cx-QHk" firstAttribute="top" secondItem="1N0-G2-tQL" secondAttribute="top" id="SkK-dl-S39"/>
+                            <constraint firstItem="1N0-G2-tQL" firstAttribute="trailing" secondItem="Lbu-cx-QHk" secondAttribute="trailing" id="eOl-OV-DvM"/>
+                        </constraints>
+                        <viewLayoutGuide key="safeArea" id="1N0-G2-tQL"/>
+                    </view>
+                    <navigationItem key="navigationItem" id="P2m-PW-ru6">
+                        <barButtonItem key="leftBarButtonItem" style="plain" id="Jhb-TQ-bq2">
+                            <button key="customView" opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" id="faT-8l-14s">
+                                <rect key="frame" x="20" y="7" width="92" height="30"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <state key="normal" title="閉じる"/>
+                                <connections>
+                                    <action selector="closeOmikuji:" destination="lEm-Tq-3WU" eventType="touchDown" id="4FJ-BZ-lcf"/>
+                                </connections>
+                            </button>
+                        </barButtonItem>
+                    </navigationItem>
+                    <connections>
+                        <outlet property="selectStage" destination="Lbu-cx-QHk" id="ebQ-mL-oK5"/>
+                        <segue destination="jXT-SU-f6h" kind="push" identifier="toResult" id="NEM-eo-eIw"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="Deq-cW-jw5" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="316" y="138"/>
+        </scene>
+        <!--OmikujiResult-->
+        <scene sceneID="isU-Pm-kaG">
+            <objects>
+                <viewControllerPlaceholder storyboardName="OmikujiResult" id="jXT-SU-f6h" sceneMemberID="viewController">
+                    <navigationItem key="navigationItem" id="Pd2-QH-K49"/>
+                </viewControllerPlaceholder>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="Sad-2G-jma" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="1207" y="138"/>
+        </scene>
+    </scenes>
+</document>

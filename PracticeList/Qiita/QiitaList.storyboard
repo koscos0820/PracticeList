@@ -1,0 +1,52 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="15705" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="baP-1L-CfX">
+    <device id="retina6_1" orientation="portrait" appearance="light"/>
+    <dependencies>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="15706"/>
+        <capability name="Safe area layout guides" minToolsVersion="9.0"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <scenes>
+        <!--Qiita List View Controller-->
+        <scene sceneID="Fzx-7y-jXa">
+            <objects>
+                <viewController id="baP-1L-CfX" customClass="QiitaListViewController" customModule="PracticeList" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="4w4-J7-6Nw">
+                        <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <tableView clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="-1" estimatedRowHeight="-1" sectionHeaderHeight="28" sectionFooterHeight="28" translatesAutoresizingMaskIntoConstraints="NO" id="j7W-Dt-P8z">
+                                <rect key="frame" x="0.0" y="44" width="414" height="818"/>
+                                <color key="backgroundColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
+                            </tableView>
+                        </subviews>
+                        <color key="backgroundColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
+                        <constraints>
+                            <constraint firstItem="j7W-Dt-P8z" firstAttribute="leading" secondItem="UyU-85-OGf" secondAttribute="leading" id="5Lq-eR-Uhj"/>
+                            <constraint firstItem="j7W-Dt-P8z" firstAttribute="top" secondItem="UyU-85-OGf" secondAttribute="top" id="INJ-Ma-qlW"/>
+                            <constraint firstItem="UyU-85-OGf" firstAttribute="bottom" secondItem="j7W-Dt-P8z" secondAttribute="bottom" id="ivV-Cj-5XG"/>
+                            <constraint firstItem="UyU-85-OGf" firstAttribute="trailing" secondItem="j7W-Dt-P8z" secondAttribute="trailing" id="x7s-3A-A5G"/>
+                        </constraints>
+                        <viewLayoutGuide key="safeArea" id="UyU-85-OGf"/>
+                    </view>
+                    <connections>
+                        <outlet property="listTableView" destination="j7W-Dt-P8z" id="6On-Pa-fGh"/>
+                        <segue destination="vZm-Rm-V3A" kind="push" identifier="toDetail" id="8z7-IW-q1L"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="BcY-zo-FEE" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="136" y="86"/>
+        </scene>
+        <!--QiitaDetail-->
+        <scene sceneID="sEz-wn-uUG">
+            <objects>
+                <viewControllerPlaceholder storyboardName="QiitaDetail" id="vZm-Rm-V3A" sceneMemberID="viewController">
+                    <navigationItem key="navigationItem" id="C1N-Zf-ELv"/>
+                </viewControllerPlaceholder>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="waW-Lw-bvE" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="959" y="86"/>
+        </scene>
+    </scenes>
+</document>

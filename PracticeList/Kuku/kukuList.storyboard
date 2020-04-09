@@ -1,0 +1,80 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="15705" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="p9V-Yk-pzz">
+    <device id="retina6_1" orientation="portrait" appearance="light"/>
+    <dependencies>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="15706"/>
+        <capability name="Safe area layout guides" minToolsVersion="9.0"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <scenes>
+        <!--Navigation Controller-->
+        <scene sceneID="g8n-a5-YQE">
+            <objects>
+                <navigationController id="p9V-Yk-pzz" sceneMemberID="viewController">
+                    <navigationBar key="navigationBar" contentMode="scaleToFill" insetsLayoutMarginsFromSafeArea="NO" id="YVe-se-0IR">
+                        <rect key="frame" x="0.0" y="44" width="414" height="44"/>
+                        <autoresizingMask key="autoresizingMask"/>
+                    </navigationBar>
+                    <connections>
+                        <segue destination="5Kq-fV-yrm" kind="relationship" relationship="rootViewController" id="aVB-9k-RGQ"/>
+                    </connections>
+                </navigationController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="2AG-rd-ilH" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="-617" y="140"/>
+        </scene>
+        <!--Kuku View Controller-->
+        <scene sceneID="hJ5-ZX-WXX">
+            <objects>
+                <viewController id="5Kq-fV-yrm" customClass="KukuViewController" customModule="PracticeList" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="tge-En-Vhd">
+                        <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <tableView clipsSubviews="YES" contentMode="scaleToFill" restorationIdentifier="kukuTable" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="-1" estimatedRowHeight="-1" sectionHeaderHeight="28" sectionFooterHeight="28" translatesAutoresizingMaskIntoConstraints="NO" id="Y36-J4-KxV">
+                                <rect key="frame" x="0.0" y="88" width="414" height="774"/>
+                                <color key="backgroundColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
+                            </tableView>
+                        </subviews>
+                        <color key="backgroundColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
+                        <constraints>
+                            <constraint firstItem="d4Q-7Y-QWN" firstAttribute="bottom" secondItem="Y36-J4-KxV" secondAttribute="bottom" id="8pm-ag-1x5"/>
+                            <constraint firstItem="Y36-J4-KxV" firstAttribute="top" secondItem="d4Q-7Y-QWN" secondAttribute="top" id="ACJ-Ef-Mmi"/>
+                            <constraint firstItem="d4Q-7Y-QWN" firstAttribute="trailing" secondItem="Y36-J4-KxV" secondAttribute="trailing" id="Gk7-xW-kfs"/>
+                            <constraint firstItem="Y36-J4-KxV" firstAttribute="leading" secondItem="d4Q-7Y-QWN" secondAttribute="leading" id="zpw-Qe-f5y"/>
+                        </constraints>
+                        <viewLayoutGuide key="safeArea" id="d4Q-7Y-QWN"/>
+                    </view>
+                    <navigationItem key="navigationItem" id="whH-tR-Lan">
+                        <barButtonItem key="leftBarButtonItem" id="1I0-Mh-wUo">
+                            <button key="customView" opaque="NO" contentMode="scaleToFill" restorationIdentifier="closeButton" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" id="ahj-3K-hmK">
+                                <rect key="frame" x="20" y="7" width="92" height="30"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <state key="normal" title="閉じる"/>
+                                <connections>
+                                    <action selector="returnButton:" destination="5Kq-fV-yrm" eventType="touchUpInside" id="GLr-ul-5iH"/>
+                                </connections>
+                            </button>
+                        </barButtonItem>
+                    </navigationItem>
+                    <connections>
+                        <outlet property="kukuTable" destination="Y36-J4-KxV" id="xhx-12-FBo"/>
+                        <segue destination="Aot-ZL-uj7" kind="push" identifier="toDetail" id="6KX-Mm-XJb"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="KJ1-yi-Brr" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="200" y="140"/>
+        </scene>
+        <!--kukuDetail-->
+        <scene sceneID="pLG-8q-WLo">
+            <objects>
+                <viewControllerPlaceholder storyboardName="kukuDetail" id="Aot-ZL-uj7" sceneMemberID="viewController">
+                    <navigationItem key="navigationItem" id="IDe-ap-584"/>
+                </viewControllerPlaceholder>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="Qx4-42-WXv" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="1098" y="140"/>
+        </scene>
+    </scenes>
+</document>

@@ -1,0 +1,479 @@
+// !$*UTF8*$!
+{
+	archiveVersion = 1;
+	classes = {
+	};
+	objectVersion = 50;
+	objects = {
+
+/* Begin PBXBuildFile section */
+		D6731AFC243EDAA80086F91D /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = D6731AFB243EDAA80086F91D /* Assets.xcassets */; };
+		D68746A32433069A00531CD7 /* QiitaMain.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = D68746A22433069A00531CD7 /* QiitaMain.storyboard */; };
+		D68746A62433072800531CD7 /* QiitaMainViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = D68746A52433072800531CD7 /* QiitaMainViewController.swift */; };
+		D68746A824330D5100531CD7 /* QiitaList.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = D68746A724330D5100531CD7 /* QiitaList.storyboard */; };
+		D68746AA2433114900531CD7 /* QiitaListViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = D68746A92433114900531CD7 /* QiitaListViewController.swift */; };
+		D68746AC2433131000531CD7 /* QiitaStruct.swift in Sources */ = {isa = PBXBuildFile; fileRef = D68746AB2433131000531CD7 /* QiitaStruct.swift */; };
+		D68746AE2433206600531CD7 /* QiitaDetail.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = D68746AD2433206600531CD7 /* QiitaDetail.storyboard */; };
+		D68746B02433208E00531CD7 /* QiitaDetailViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = D68746AF2433208E00531CD7 /* QiitaDetailViewController.swift */; };
+		D699C3F2242310B100298231 /* TetoView.xib in Resources */ = {isa = PBXBuildFile; fileRef = D699C3F1242310B100298231 /* TetoView.xib */; };
+		D699C3F4242310E600298231 /* TetoView.swift in Sources */ = {isa = PBXBuildFile; fileRef = D699C3F3242310E600298231 /* TetoView.swift */; };
+		D69A43A22421D9D600E77C78 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = D69A43A02421D9D600E77C78 /* LaunchScreen.storyboard */; };
+		D69A43AA2421DA0C00E77C78 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = D69A43A92421DA0B00E77C78 /* Main.storyboard */; };
+		D69A43AC2421DA2000E77C78 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = D69A43AB2421DA2000E77C78 /* ViewController.swift */; };
+		D69A43B22421DAA900E77C78 /* OmikujiResult.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = D69A43AD2421DAA800E77C78 /* OmikujiResult.storyboard */; };
+		D69A43B32421DAA900E77C78 /* OmikujiStageSelect.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = D69A43AE2421DAA900E77C78 /* OmikujiStageSelect.storyboard */; };
+		D69A43B42421DAA900E77C78 /* OmikujiStageSelect.swift in Sources */ = {isa = PBXBuildFile; fileRef = D69A43AF2421DAA900E77C78 /* OmikujiStageSelect.swift */; };
+		D69A43B62421DAA900E77C78 /* OmikujiResult.swift in Sources */ = {isa = PBXBuildFile; fileRef = D69A43B12421DAA900E77C78 /* OmikujiResult.swift */; };
+		D69A43BB2421DAB600E77C78 /* KukuViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = D69A43B72421DAB600E77C78 /* KukuViewController.swift */; };
+		D69A43BC2421DAB600E77C78 /* kukuList.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = D69A43B82421DAB600E77C78 /* kukuList.storyboard */; };
+		D69A43BD2421DAB600E77C78 /* kukuDetail.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = D69A43B92421DAB600E77C78 /* kukuDetail.storyboard */; };
+		D69A43BE2421DAB600E77C78 /* KukuDetailViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = D69A43BA2421DAB600E77C78 /* KukuDetailViewController.swift */; };
+		D69A43C52421DAC400E77C78 /* AtoZList.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = D69A43BF2421DAC400E77C78 /* AtoZList.storyboard */; };
+		D69A43C62421DAC400E77C78 /* AtoZDetail.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = D69A43C02421DAC400E77C78 /* AtoZDetail.storyboard */; };
+		D69A43C72421DAC400E77C78 /* AtoZDetail.swift in Sources */ = {isa = PBXBuildFile; fileRef = D69A43C12421DAC400E77C78 /* AtoZDetail.swift */; };
+		D69A43C82421DAC400E77C78 /* AtoZList.swift in Sources */ = {isa = PBXBuildFile; fileRef = D69A43C22421DAC400E77C78 /* AtoZList.swift */; };
+		D69A43C92421DAC400E77C78 /* CustomUICollectionViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = D69A43C32421DAC400E77C78 /* CustomUICollectionViewCell.swift */; };
+		D69A43CC2421DB6700E77C78 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = D69A43CB2421DB6700E77C78 /* AppDelegate.swift */; };
+		D69A43CE2421DBAA00E77C78 /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = D69A43CD2421DBAA00E77C78 /* SceneDelegate.swift */; };
+		D69A43D72421FBFD00E77C78 /* Tetoris.swift in Sources */ = {isa = PBXBuildFile; fileRef = D69A43D62421FBFD00E77C78 /* Tetoris.swift */; };
+		D69A43D92421FC0F00E77C78 /* Tetoris.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = D69A43D82421FC0F00E77C78 /* Tetoris.storyboard */; };
+/* End PBXBuildFile section */
+
+/* Begin PBXFileReference section */
+		D6731AFB243EDAA80086F91D /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
+		D68746A22433069A00531CD7 /* QiitaMain.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = QiitaMain.storyboard; sourceTree = "<group>"; };
+		D68746A52433072800531CD7 /* QiitaMainViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = QiitaMainViewController.swift; sourceTree = "<group>"; };
+		D68746A724330D5100531CD7 /* QiitaList.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = QiitaList.storyboard; sourceTree = "<group>"; };
+		D68746A92433114900531CD7 /* QiitaListViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = QiitaListViewController.swift; sourceTree = "<group>"; };
+		D68746AB2433131000531CD7 /* QiitaStruct.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = QiitaStruct.swift; sourceTree = "<group>"; };
+		D68746AD2433206600531CD7 /* QiitaDetail.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = QiitaDetail.storyboard; sourceTree = "<group>"; };
+		D68746AF2433208E00531CD7 /* QiitaDetailViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = QiitaDetailViewController.swift; sourceTree = "<group>"; };
+		D699C3F1242310B100298231 /* TetoView.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = TetoView.xib; sourceTree = "<group>"; };
+		D699C3F3242310E600298231 /* TetoView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TetoView.swift; sourceTree = "<group>"; };
+		D69A43922421D9D500E77C78 /* PracticeList.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = PracticeList.app; sourceTree = BUILT_PRODUCTS_DIR; };
+		D69A43A12421D9D600E77C78 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
+		D69A43A32421D9D600E77C78 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		D69A43A92421DA0B00E77C78 /* Main.storyboard */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.storyboard; path = Main.storyboard; sourceTree = "<group>"; };
+		D69A43AB2421DA2000E77C78 /* ViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
+		D69A43AD2421DAA800E77C78 /* OmikujiResult.storyboard */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.storyboard; path = OmikujiResult.storyboard; sourceTree = "<group>"; };
+		D69A43AE2421DAA900E77C78 /* OmikujiStageSelect.storyboard */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.storyboard; path = OmikujiStageSelect.storyboard; sourceTree = "<group>"; };
+		D69A43AF2421DAA900E77C78 /* OmikujiStageSelect.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = OmikujiStageSelect.swift; sourceTree = "<group>"; };
+		D69A43B12421DAA900E77C78 /* OmikujiResult.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = OmikujiResult.swift; sourceTree = "<group>"; };
+		D69A43B72421DAB600E77C78 /* KukuViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = KukuViewController.swift; sourceTree = "<group>"; };
+		D69A43B82421DAB600E77C78 /* kukuList.storyboard */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.storyboard; path = kukuList.storyboard; sourceTree = "<group>"; };
+		D69A43B92421DAB600E77C78 /* kukuDetail.storyboard */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.storyboard; path = kukuDetail.storyboard; sourceTree = "<group>"; };
+		D69A43BA2421DAB600E77C78 /* KukuDetailViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = KukuDetailViewController.swift; sourceTree = "<group>"; };
+		D69A43BF2421DAC400E77C78 /* AtoZList.storyboard */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.storyboard; path = AtoZList.storyboard; sourceTree = "<group>"; };
+		D69A43C02421DAC400E77C78 /* AtoZDetail.storyboard */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.storyboard; path = AtoZDetail.storyboard; sourceTree = "<group>"; };
+		D69A43C12421DAC400E77C78 /* AtoZDetail.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = AtoZDetail.swift; sourceTree = "<group>"; };
+		D69A43C22421DAC400E77C78 /* AtoZList.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = AtoZList.swift; sourceTree = "<group>"; };
+		D69A43C32421DAC400E77C78 /* CustomUICollectionViewCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CustomUICollectionViewCell.swift; sourceTree = "<group>"; };
+		D69A43CB2421DB6700E77C78 /* AppDelegate.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = AppDelegate.swift; path = AtoZ/AppDelegate.swift; sourceTree = "<group>"; };
+		D69A43CD2421DBAA00E77C78 /* SceneDelegate.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = SceneDelegate.swift; path = AtoZ/SceneDelegate.swift; sourceTree = "<group>"; };
+		D69A43D62421FBFD00E77C78 /* Tetoris.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Tetoris.swift; sourceTree = "<group>"; };
+		D69A43D82421FC0F00E77C78 /* Tetoris.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = Tetoris.storyboard; sourceTree = "<group>"; };
+/* End PBXFileReference section */
+
+/* Begin PBXFrameworksBuildPhase section */
+		D69A438F2421D9D500E77C78 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXFrameworksBuildPhase section */
+
+/* Begin PBXGroup section */
+		D68746A4243306B500531CD7 /* Qiita */ = {
+			isa = PBXGroup;
+			children = (
+				D68746A22433069A00531CD7 /* QiitaMain.storyboard */,
+				D68746A52433072800531CD7 /* QiitaMainViewController.swift */,
+				D68746A724330D5100531CD7 /* QiitaList.storyboard */,
+				D68746A92433114900531CD7 /* QiitaListViewController.swift */,
+				D68746AB2433131000531CD7 /* QiitaStruct.swift */,
+				D68746AD2433206600531CD7 /* QiitaDetail.storyboard */,
+				D68746AF2433208E00531CD7 /* QiitaDetailViewController.swift */,
+			);
+			path = Qiita;
+			sourceTree = "<group>";
+		};
+		D69A43892421D9D500E77C78 = {
+			isa = PBXGroup;
+			children = (
+				D69A43942421D9D500E77C78 /* PracticeList */,
+				D69A43932421D9D500E77C78 /* Products */,
+			);
+			sourceTree = "<group>";
+		};
+		D69A43932421D9D500E77C78 /* Products */ = {
+			isa = PBXGroup;
+			children = (
+				D69A43922421D9D500E77C78 /* PracticeList.app */,
+			);
+			name = Products;
+			sourceTree = "<group>";
+		};
+		D69A43942421D9D500E77C78 /* PracticeList */ = {
+			isa = PBXGroup;
+			children = (
+				D69A43D12421FAA900E77C78 /* Main */,
+				D69A43D22421FAD400E77C78 /* Kuku */,
+				D69A43D32421FAF400E77C78 /* Omikuji */,
+				D69A43D42421FB1000E77C78 /* AtoZ */,
+				D69A43D52421FB7400E77C78 /* Tetoris */,
+				D68746A4243306B500531CD7 /* Qiita */,
+				D69A43CD2421DBAA00E77C78 /* SceneDelegate.swift */,
+				D69A43CB2421DB6700E77C78 /* AppDelegate.swift */,
+				D69A43A02421D9D600E77C78 /* LaunchScreen.storyboard */,
+				D69A43A32421D9D600E77C78 /* Info.plist */,
+				D6731AFB243EDAA80086F91D /* Assets.xcassets */,
+			);
+			path = PracticeList;
+			sourceTree = "<group>";
+		};
+		D69A43D12421FAA900E77C78 /* Main */ = {
+			isa = PBXGroup;
+			children = (
+				D69A43A92421DA0B00E77C78 /* Main.storyboard */,
+				D69A43AB2421DA2000E77C78 /* ViewController.swift */,
+			);
+			path = Main;
+			sourceTree = "<group>";
+		};
+		D69A43D22421FAD400E77C78 /* Kuku */ = {
+			isa = PBXGroup;
+			children = (
+				D69A43B82421DAB600E77C78 /* kukuList.storyboard */,
+				D69A43B72421DAB600E77C78 /* KukuViewController.swift */,
+				D69A43B92421DAB600E77C78 /* kukuDetail.storyboard */,
+				D69A43BA2421DAB600E77C78 /* KukuDetailViewController.swift */,
+			);
+			path = Kuku;
+			sourceTree = "<group>";
+		};
+		D69A43D32421FAF400E77C78 /* Omikuji */ = {
+			isa = PBXGroup;
+			children = (
+				D69A43AE2421DAA900E77C78 /* OmikujiStageSelect.storyboard */,
+				D69A43AF2421DAA900E77C78 /* OmikujiStageSelect.swift */,
+				D69A43AD2421DAA800E77C78 /* OmikujiResult.storyboard */,
+				D69A43B12421DAA900E77C78 /* OmikujiResult.swift */,
+			);
+			path = Omikuji;
+			sourceTree = "<group>";
+		};
+		D69A43D42421FB1000E77C78 /* AtoZ */ = {
+			isa = PBXGroup;
+			children = (
+				D69A43BF2421DAC400E77C78 /* AtoZList.storyboard */,
+				D69A43C22421DAC400E77C78 /* AtoZList.swift */,
+				D69A43C32421DAC400E77C78 /* CustomUICollectionViewCell.swift */,
+				D69A43C02421DAC400E77C78 /* AtoZDetail.storyboard */,
+				D69A43C12421DAC400E77C78 /* AtoZDetail.swift */,
+			);
+			path = AtoZ;
+			sourceTree = "<group>";
+		};
+		D69A43D52421FB7400E77C78 /* Tetoris */ = {
+			isa = PBXGroup;
+			children = (
+				D69A43D82421FC0F00E77C78 /* Tetoris.storyboard */,
+				D69A43D62421FBFD00E77C78 /* Tetoris.swift */,
+				D699C3F1242310B100298231 /* TetoView.xib */,
+				D699C3F3242310E600298231 /* TetoView.swift */,
+			);
+			path = Tetoris;
+			sourceTree = "<group>";
+		};
+/* End PBXGroup section */
+
+/* Begin PBXNativeTarget section */
+		D69A43912421D9D500E77C78 /* PracticeList */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = D69A43A62421D9D600E77C78 /* Build configuration list for PBXNativeTarget "PracticeList" */;
+			buildPhases = (
+				D69A438E2421D9D500E77C78 /* Sources */,
+				D69A438F2421D9D500E77C78 /* Frameworks */,
+				D69A43902421D9D500E77C78 /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			name = PracticeList;
+			productName = PracticeList;
+			productReference = D69A43922421D9D500E77C78 /* PracticeList.app */;
+			productType = "com.apple.product-type.application";
+		};
+/* End PBXNativeTarget section */
+
+/* Begin PBXProject section */
+		D69A438A2421D9D500E77C78 /* Project object */ = {
+			isa = PBXProject;
+			attributes = {
+				LastSwiftUpdateCheck = 1130;
+				LastUpgradeCheck = 1130;
+				ORGANIZATIONNAME = "kosuke kihara";
+				TargetAttributes = {
+					D69A43912421D9D500E77C78 = {
+						CreatedOnToolsVersion = 11.3.1;
+					};
+				};
+			};
+			buildConfigurationList = D69A438D2421D9D500E77C78 /* Build configuration list for PBXProject "PracticeList" */;
+			compatibilityVersion = "Xcode 9.3";
+			developmentRegion = en;
+			hasScannedForEncodings = 0;
+			knownRegions = (
+				en,
+				Base,
+			);
+			mainGroup = D69A43892421D9D500E77C78;
+			productRefGroup = D69A43932421D9D500E77C78 /* Products */;
+			projectDirPath = "";
+			projectRoot = "";
+			targets = (
+				D69A43912421D9D500E77C78 /* PracticeList */,
+			);
+		};
+/* End PBXProject section */
+
+/* Begin PBXResourcesBuildPhase section */
+		D69A43902421D9D500E77C78 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				D68746A32433069A00531CD7 /* QiitaMain.storyboard in Resources */,
+				D699C3F2242310B100298231 /* TetoView.xib in Resources */,
+				D69A43D92421FC0F00E77C78 /* Tetoris.storyboard in Resources */,
+				D69A43BC2421DAB600E77C78 /* kukuList.storyboard in Resources */,
+				D6731AFC243EDAA80086F91D /* Assets.xcassets in Resources */,
+				D68746A824330D5100531CD7 /* QiitaList.storyboard in Resources */,
+				D69A43C62421DAC400E77C78 /* AtoZDetail.storyboard in Resources */,
+				D69A43AA2421DA0C00E77C78 /* Main.storyboard in Resources */,
+				D69A43BD2421DAB600E77C78 /* kukuDetail.storyboard in Resources */,
+				D69A43A22421D9D600E77C78 /* LaunchScreen.storyboard in Resources */,
+				D68746AE2433206600531CD7 /* QiitaDetail.storyboard in Resources */,
+				D69A43C52421DAC400E77C78 /* AtoZList.storyboard in Resources */,
+				D69A43B32421DAA900E77C78 /* OmikujiStageSelect.storyboard in Resources */,
+				D69A43B22421DAA900E77C78 /* OmikujiResult.storyboard in Resources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXResourcesBuildPhase section */
+
+/* Begin PBXSourcesBuildPhase section */
+		D69A438E2421D9D500E77C78 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				D699C3F4242310E600298231 /* TetoView.swift in Sources */,
+				D69A43CC2421DB6700E77C78 /* AppDelegate.swift in Sources */,
+				D69A43B62421DAA900E77C78 /* OmikujiResult.swift in Sources */,
+				D69A43BB2421DAB600E77C78 /* KukuViewController.swift in Sources */,
+				D68746B02433208E00531CD7 /* QiitaDetailViewController.swift in Sources */,
+				D68746AC2433131000531CD7 /* QiitaStruct.swift in Sources */,
+				D69A43BE2421DAB600E77C78 /* KukuDetailViewController.swift in Sources */,
+				D69A43AC2421DA2000E77C78 /* ViewController.swift in Sources */,
+				D69A43C72421DAC400E77C78 /* AtoZDetail.swift in Sources */,
+				D69A43C92421DAC400E77C78 /* CustomUICollectionViewCell.swift in Sources */,
+				D69A43D72421FBFD00E77C78 /* Tetoris.swift in Sources */,
+				D68746AA2433114900531CD7 /* QiitaListViewController.swift in Sources */,
+				D68746A62433072800531CD7 /* QiitaMainViewController.swift in Sources */,
+				D69A43CE2421DBAA00E77C78 /* SceneDelegate.swift in Sources */,
+				D69A43B42421DAA900E77C78 /* OmikujiStageSelect.swift in Sources */,
+				D69A43C82421DAC400E77C78 /* AtoZList.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXSourcesBuildPhase section */
+
+/* Begin PBXVariantGroup section */
+		D69A43A02421D9D600E77C78 /* LaunchScreen.storyboard */ = {
+			isa = PBXVariantGroup;
+			children = (
+				D69A43A12421D9D600E77C78 /* Base */,
+			);
+			name = LaunchScreen.storyboard;
+			sourceTree = "<group>";
+		};
+/* End PBXVariantGroup section */
+
+/* Begin XCBuildConfiguration section */
+		D69A43A42421D9D600E77C78 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_ANALYZER_NONNULL = YES;
+				CLANG_ANALYZER_NUMBER_OBJECT_CONVERSION = YES_AGGRESSIVE;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++14";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_ENABLE_OBJC_WEAK = YES;
+				CLANG_WARN_BLOCK_CAPTURE_AUTORELEASING = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_COMMA = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DEPRECATED_OBJC_IMPLEMENTATIONS = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_DOCUMENTATION_COMMENTS = YES;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INFINITE_RECURSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_NON_LITERAL_NULL_CONVERSION = YES;
+				CLANG_WARN_OBJC_IMPLICIT_RETAIN_SELF = YES;
+				CLANG_WARN_OBJC_LITERAL_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_RANGE_LOOP_ANALYSIS = YES;
+				CLANG_WARN_STRICT_PROTOTYPES = YES;
+				CLANG_WARN_SUSPICIOUS_MOVE = YES;
+				CLANG_WARN_UNGUARDED_AVAILABILITY = YES_AGGRESSIVE;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				COPY_PHASE_STRIP = NO;
+				DEBUG_INFORMATION_FORMAT = dwarf;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				ENABLE_TESTABILITY = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu11;
+				GCC_DYNAMIC_NO_PIC = NO;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_OPTIMIZATION_LEVEL = 0;
+				GCC_PREPROCESSOR_DEFINITIONS = (
+					"DEBUG=1",
+					"$(inherited)",
+				);
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 13.2;
+				MTL_ENABLE_DEBUG_INFO = INCLUDE_SOURCE;
+				MTL_FAST_MATH = YES;
+				ONLY_ACTIVE_ARCH = YES;
+				SDKROOT = iphoneos;
+				SWIFT_ACTIVE_COMPILATION_CONDITIONS = DEBUG;
+				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
+			};
+			name = Debug;
+		};
+		D69A43A52421D9D600E77C78 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_ANALYZER_NONNULL = YES;
+				CLANG_ANALYZER_NUMBER_OBJECT_CONVERSION = YES_AGGRESSIVE;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++14";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_ENABLE_OBJC_WEAK = YES;
+				CLANG_WARN_BLOCK_CAPTURE_AUTORELEASING = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_COMMA = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DEPRECATED_OBJC_IMPLEMENTATIONS = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_DOCUMENTATION_COMMENTS = YES;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INFINITE_RECURSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_NON_LITERAL_NULL_CONVERSION = YES;
+				CLANG_WARN_OBJC_IMPLICIT_RETAIN_SELF = YES;
+				CLANG_WARN_OBJC_LITERAL_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_RANGE_LOOP_ANALYSIS = YES;
+				CLANG_WARN_STRICT_PROTOTYPES = YES;
+				CLANG_WARN_SUSPICIOUS_MOVE = YES;
+				CLANG_WARN_UNGUARDED_AVAILABILITY = YES_AGGRESSIVE;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				COPY_PHASE_STRIP = NO;
+				DEBUG_INFORMATION_FORMAT = "dwarf-with-dsym";
+				ENABLE_NS_ASSERTIONS = NO;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu11;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 13.2;
+				MTL_ENABLE_DEBUG_INFO = NO;
+				MTL_FAST_MATH = YES;
+				SDKROOT = iphoneos;
+				SWIFT_COMPILATION_MODE = wholemodule;
+				SWIFT_OPTIMIZATION_LEVEL = "-O";
+				VALIDATE_PRODUCT = YES;
+			};
+			name = Release;
+		};
+		D69A43A72421D9D600E77C78 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				CODE_SIGN_STYLE = Automatic;
+				DEVELOPMENT_TEAM = T22NZ4CB27;
+				INFOPLIST_FILE = PracticeList/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+				);
+				PRODUCT_BUNDLE_IDENTIFIER = "jp.co.cimtech.kosuke-kihara.PracticeList";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+			};
+			name = Debug;
+		};
+		D69A43A82421D9D600E77C78 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				CODE_SIGN_STYLE = Automatic;
+				DEVELOPMENT_TEAM = T22NZ4CB27;
+				INFOPLIST_FILE = PracticeList/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+				);
+				PRODUCT_BUNDLE_IDENTIFIER = "jp.co.cimtech.kosuke-kihara.PracticeList";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+			};
+			name = Release;
+		};
+/* End XCBuildConfiguration section */
+
+/* Begin XCConfigurationList section */
+		D69A438D2421D9D500E77C78 /* Build configuration list for PBXProject "PracticeList" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				D69A43A42421D9D600E77C78 /* Debug */,
+				D69A43A52421D9D600E77C78 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		D69A43A62421D9D600E77C78 /* Build configuration list for PBXNativeTarget "PracticeList" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				D69A43A72421D9D600E77C78 /* Debug */,
+				D69A43A82421D9D600E77C78 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+/* End XCConfigurationList section */
+	};
+	rootObject = D69A438A2421D9D500E77C78 /* Project object */;
+}

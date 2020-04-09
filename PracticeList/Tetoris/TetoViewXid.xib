@@ -1,0 +1,113 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.XIB" version="3.0" toolsVersion="15705" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES">
+    <device id="retina6_1" orientation="portrait" appearance="light"/>
+    <dependencies>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="15706"/>
+        <capability name="Safe area layout guides" minToolsVersion="9.0"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <objects>
+        <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner" customClass="TetoView" customModule="PracticeList" customModuleProvider="target">
+            <connections>
+                <outlet property="tetoView" destination="Nwz-AT-IlC" id="p8y-HK-3Vl"/>
+            </connections>
+        </placeholder>
+        <placeholder placeholderIdentifier="IBFirstResponder" id="-2" customClass="UIResponder"/>
+        <view contentMode="scaleToFill" id="iN0-l3-epB" customClass="TetoView" customModule="PracticeList" customModuleProvider="target">
+            <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
+            <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+            <subviews>
+                <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="Nwz-AT-IlC" customClass="TetoView" customModule="PracticeList" customModuleProvider="target">
+                    <rect key="frame" x="0.0" y="44" width="414" height="270"/>
+                    <subviews>
+                        <view contentMode="scaleToFill" id="O6u-t8-ijL" userLabel="View1">
+                            <rect key="frame" x="162" y="50" width="90" height="90"/>
+                            <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                            <subviews>
+                                <view contentMode="scaleToFill" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="nBV-IL-qh6">
+                                    <rect key="frame" x="5" y="5" width="80" height="80"/>
+                                    <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                    <color key="backgroundColor" systemColor="systemPinkColor" red="1" green="0.1764705882" blue="0.33333333329999998" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                </view>
+                            </subviews>
+                            <color key="backgroundColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
+                            <constraints>
+                                <constraint firstAttribute="height" constant="90" id="1qb-j0-Rvb"/>
+                                <constraint firstAttribute="width" constant="90" id="uUM-vW-k9S"/>
+                            </constraints>
+                            <edgeInsets key="layoutMargins" top="0.0" left="0.0" bottom="0.0" right="0.0"/>
+                        </view>
+                        <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="tkr-Av-2L7" userLabel="View2">
+                            <rect key="frame" x="72" y="50" width="90" height="90"/>
+                            <subviews>
+                                <view contentMode="scaleToFill" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="Gjj-Jj-Rlj">
+                                    <rect key="frame" x="5" y="5" width="80" height="80"/>
+                                    <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                    <color key="backgroundColor" systemColor="systemPinkColor" red="1" green="0.1764705882" blue="0.33333333329999998" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                </view>
+                            </subviews>
+                            <color key="backgroundColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
+                            <constraints>
+                                <constraint firstAttribute="width" constant="90" id="Sqz-q9-mpx"/>
+                                <constraint firstAttribute="height" constant="90" id="u5D-zg-7yw"/>
+                            </constraints>
+                            <edgeInsets key="layoutMargins" top="0.0" left="0.0" bottom="0.0" right="0.0"/>
+                        </view>
+                        <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="tRZ-Eh-Rfq" userLabel="View3">
+                            <rect key="frame" x="162" y="140" width="90" height="90"/>
+                            <subviews>
+                                <view contentMode="scaleToFill" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="SUn-w4-q4X">
+                                    <rect key="frame" x="5" y="5" width="80" height="80"/>
+                                    <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                    <color key="backgroundColor" systemColor="systemPinkColor" red="1" green="0.1764705882" blue="0.33333333329999998" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                </view>
+                            </subviews>
+                            <color key="backgroundColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
+                            <constraints>
+                                <constraint firstAttribute="height" constant="90" id="BxG-tS-b1Z"/>
+                                <constraint firstAttribute="width" constant="90" id="ebo-E0-wWp"/>
+                            </constraints>
+                        </view>
+                        <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="vbT-X9-ZdR" userLabel="View4">
+                            <rect key="frame" x="252" y="140" width="90" height="90"/>
+                            <subviews>
+                                <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="tPf-D6-0Es">
+                                    <rect key="frame" x="5" y="5" width="80" height="80"/>
+                                    <color key="backgroundColor" systemColor="systemPinkColor" red="1" green="0.1764705882" blue="0.33333333329999998" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                </view>
+                            </subviews>
+                            <color key="backgroundColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
+                            <constraints>
+                                <constraint firstAttribute="trailing" secondItem="tPf-D6-0Es" secondAttribute="trailing" constant="5" id="0md-lN-wyz"/>
+                                <constraint firstAttribute="width" constant="90" id="4s1-4G-bpO"/>
+                                <constraint firstItem="tPf-D6-0Es" firstAttribute="leading" secondItem="vbT-X9-ZdR" secondAttribute="leading" constant="5" id="EJC-J1-3zx"/>
+                                <constraint firstAttribute="bottom" secondItem="tPf-D6-0Es" secondAttribute="bottom" constant="5" id="QfB-Zd-KIE"/>
+                                <constraint firstItem="tPf-D6-0Es" firstAttribute="top" secondItem="vbT-X9-ZdR" secondAttribute="top" constant="5" id="aNs-bp-69e"/>
+                                <constraint firstAttribute="height" constant="90" id="q5D-Sv-qWP"/>
+                            </constraints>
+                        </view>
+                    </subviews>
+                    <color key="backgroundColor" systemColor="systemTealColor" red="0.35294117650000001" green="0.7843137255" blue="0.98039215690000003" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                    <constraints>
+                        <constraint firstItem="O6u-t8-ijL" firstAttribute="centerY" secondItem="tkr-Av-2L7" secondAttribute="centerY" id="0cw-LB-YiG"/>
+                        <constraint firstItem="vbT-X9-ZdR" firstAttribute="leading" secondItem="O6u-t8-ijL" secondAttribute="trailing" id="ENQ-dh-E7B"/>
+                        <constraint firstItem="vbT-X9-ZdR" firstAttribute="top" secondItem="O6u-t8-ijL" secondAttribute="bottom" id="HqK-u5-fcm"/>
+                        <constraint firstItem="tRZ-Eh-Rfq" firstAttribute="centerX" secondItem="Nwz-AT-IlC" secondAttribute="centerX" id="alS-0T-Fw3"/>
+                        <constraint firstAttribute="height" constant="270" id="bmp-iK-n1R"/>
+                        <constraint firstAttribute="width" constant="414" id="hrV-dP-yHl"/>
+                        <constraint firstItem="O6u-t8-ijL" firstAttribute="leading" secondItem="tkr-Av-2L7" secondAttribute="trailing" id="jDQ-cm-Ks2"/>
+                        <constraint firstItem="tRZ-Eh-Rfq" firstAttribute="top" secondItem="O6u-t8-ijL" secondAttribute="bottom" id="tBa-zI-3JU"/>
+                    </constraints>
+                </view>
+            </subviews>
+            <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+            <constraints>
+                <constraint firstItem="Nwz-AT-IlC" firstAttribute="trailing" secondItem="vUN-kp-3ea" secondAttribute="trailing" id="VPh-vg-lb8"/>
+                <constraint firstItem="Nwz-AT-IlC" firstAttribute="leading" secondItem="vUN-kp-3ea" secondAttribute="leading" id="cl4-gh-xSV"/>
+                <constraint firstItem="Nwz-AT-IlC" firstAttribute="top" secondItem="vUN-kp-3ea" secondAttribute="top" id="otW-xU-AqZ"/>
+            </constraints>
+            <viewLayoutGuide key="safeArea" id="vUN-kp-3ea"/>
+            <point key="canvasLocation" x="91" y="9"/>
+        </view>
+    </objects>
+</document>

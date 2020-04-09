@@ -1,0 +1,105 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="15705" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="WL3-kx-hNn">
+    <device id="retina6_1" orientation="portrait" appearance="light"/>
+    <dependencies>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="15706"/>
+        <capability name="Safe area layout guides" minToolsVersion="9.0"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <scenes>
+        <!--Navigation Controller-->
+        <scene sceneID="kqN-3z-xfD">
+            <objects>
+                <navigationController id="WL3-kx-hNn" sceneMemberID="viewController">
+                    <navigationBar key="navigationBar" contentMode="scaleToFill" insetsLayoutMarginsFromSafeArea="NO" id="Vgm-vR-f5Y">
+                        <rect key="frame" x="0.0" y="44" width="414" height="44"/>
+                        <autoresizingMask key="autoresizingMask"/>
+                    </navigationBar>
+                    <connections>
+                        <segue destination="Tge-78-tvg" kind="relationship" relationship="rootViewController" id="THy-BM-0En"/>
+                    </connections>
+                </navigationController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="u8u-dp-IoY" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="-1296" y="126"/>
+        </scene>
+        <!--View Controller-->
+        <scene sceneID="VtP-kM-Quy">
+            <objects>
+                <viewController id="Tge-78-tvg" customClass="ViewController" customModule="PracticeList" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="MFX-MM-lkr">
+                        <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <tableView clipsSubviews="YES" contentMode="scaleToFill" restorationIdentifier="practiceListTable" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="-1" estimatedRowHeight="-1" sectionHeaderHeight="28" sectionFooterHeight="28" translatesAutoresizingMaskIntoConstraints="NO" id="SWl-3y-EDX">
+                                <rect key="frame" x="0.0" y="88" width="414" height="774"/>
+                                <color key="backgroundColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
+                            </tableView>
+                        </subviews>
+                        <color key="backgroundColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
+                        <constraints>
+                            <constraint firstItem="SWl-3y-EDX" firstAttribute="top" secondItem="I6M-U2-HwT" secondAttribute="top" id="ORv-t0-P0R"/>
+                            <constraint firstItem="I6M-U2-HwT" firstAttribute="bottom" secondItem="SWl-3y-EDX" secondAttribute="bottom" id="lOk-mI-f6M"/>
+                            <constraint firstItem="SWl-3y-EDX" firstAttribute="leading" secondItem="I6M-U2-HwT" secondAttribute="leading" id="qc1-Wn-jX3"/>
+                            <constraint firstItem="I6M-U2-HwT" firstAttribute="trailing" secondItem="SWl-3y-EDX" secondAttribute="trailing" id="y16-ex-Ifg"/>
+                        </constraints>
+                        <viewLayoutGuide key="safeArea" id="I6M-U2-HwT"/>
+                    </view>
+                    <navigationItem key="navigationItem" id="LVY-zs-M76"/>
+                    <connections>
+                        <outlet property="practiceListTable" destination="SWl-3y-EDX" id="iZI-Rr-2ZX"/>
+                        <segue destination="3df-TY-J1C" kind="presentation" identifier="toKukuList" modalPresentationStyle="fullScreen" id="8Ia-3I-W0G"/>
+                        <segue destination="fet-vE-KBO" kind="presentation" identifier="toOmikuji" modalPresentationStyle="fullScreen" id="KGB-Vk-83n"/>
+                        <segue destination="dOk-64-wH2" kind="presentation" identifier="toAtoZ" modalPresentationStyle="fullScreen" id="wrr-zh-C5h"/>
+                        <segue destination="Jrx-oO-MFZ" kind="presentation" identifier="toTetoris" modalPresentationStyle="fullScreen" id="lzd-ad-tPx"/>
+                        <segue destination="cxn-QT-ZOb" kind="presentation" identifier="toQiita" modalPresentationStyle="fullScreen" id="nsg-LR-tnN"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="Rcd-9d-JX4" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="-222" y="126"/>
+        </scene>
+        <!--kukuList-->
+        <scene sceneID="Pcc-ZG-BCs">
+            <objects>
+                <viewControllerPlaceholder storyboardName="kukuList" id="3df-TY-J1C" sceneMemberID="viewController"/>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="nR8-Ta-Ada" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="680" y="1"/>
+        </scene>
+        <!--OmikujiStageSelect-->
+        <scene sceneID="j6t-IS-dN9">
+            <objects>
+                <viewControllerPlaceholder storyboardIdentifier="omikuji" storyboardName="OmikujiStageSelect" id="fet-vE-KBO" sceneMemberID="viewController">
+                    <navigationItem key="navigationItem" id="VeY-9r-dK6"/>
+                </viewControllerPlaceholder>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="u9U-dA-98u" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="680" y="126"/>
+        </scene>
+        <!--AtoZList-->
+        <scene sceneID="zQi-LM-yne">
+            <objects>
+                <viewControllerPlaceholder storyboardName="AtoZList" id="dOk-64-wH2" sceneMemberID="viewController"/>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="56p-WA-rII" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="679" y="231"/>
+        </scene>
+        <!--Tetoris-->
+        <scene sceneID="4ro-fy-J0U">
+            <objects>
+                <viewControllerPlaceholder storyboardName="Tetoris" id="Jrx-oO-MFZ" sceneMemberID="viewController"/>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="g2s-vU-3Fm" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="682" y="323"/>
+        </scene>
+        <!--QiitaMain-->
+        <scene sceneID="6yW-GB-75a">
+            <objects>
+                <viewControllerPlaceholder storyboardName="QiitaMain" id="cxn-QT-ZOb" sceneMemberID="viewController"/>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="XeN-CZ-20M" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="682" y="407"/>
+        </scene>
+    </scenes>
+</document>

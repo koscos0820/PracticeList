@@ -1,0 +1,196 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<Bucket
+   uuid = "801BB5E2-A5D5-4EAC-B7DD-BC2219C19DE3"
+   type = "1"
+   version = "2.0">
+   <Breakpoints>
+      <BreakpointProxy
+         BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
+         <BreakpointContent
+            uuid = "21D07C08-E444-4B69-B57B-4DD8394CA025"
+            shouldBeEnabled = "No"
+            ignoreCount = "0"
+            continueAfterRunningActions = "No"
+            filePath = "../../PracticeList/Omikuji/OmikujiStageSelect.swift"
+            startingColumnNumber = "9223372036854775807"
+            endingColumnNumber = "9223372036854775807"
+            startingLineNumber = "63"
+            endingLineNumber = "63"
+            landmarkName = "tableView(_:didSelectRowAt:)"
+            landmarkType = "7">
+         </BreakpointContent>
+      </BreakpointProxy>
+      <BreakpointProxy
+         BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
+         <BreakpointContent
+            uuid = "EF5DB6BC-E306-4D3C-A3E8-A35C69C1640A"
+            shouldBeEnabled = "No"
+            ignoreCount = "0"
+            continueAfterRunningActions = "No"
+            filePath = "../../PracticeList/Omikuji/OmikujiStageSelect.swift"
+            startingColumnNumber = "9223372036854775807"
+            endingColumnNumber = "9223372036854775807"
+            startingLineNumber = "70"
+            endingLineNumber = "70"
+            landmarkName = "tableView(_:didSelectRowAt:)"
+            landmarkType = "7">
+         </BreakpointContent>
+      </BreakpointProxy>
+      <BreakpointProxy
+         BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
+         <BreakpointContent
+            uuid = "D09C4EBF-4284-4F06-A257-A67B9A3788D2"
+            shouldBeEnabled = "No"
+            ignoreCount = "0"
+            continueAfterRunningActions = "No"
+            filePath = "../../PracticeList/Omikuji/OmikujiResult.swift"
+            startingColumnNumber = "9223372036854775807"
+            endingColumnNumber = "9223372036854775807"
+            startingLineNumber = "16"
+            endingLineNumber = "16"
+            landmarkName = "OmikujiResult"
+            landmarkType = "3">
+            <Locations>
+               <Location
+                  uuid = "D09C4EBF-4284-4F06-A257-A67B9A3788D2 - ee2f709db4056a0"
+                  shouldBeEnabled = "No"
+                  ignoreCount = "0"
+                  continueAfterRunningActions = "No"
+                  symbolName = "PracticeList.OmikujiResult.stage.getter : PracticeList.OmikujiResult.Stage"
+                  moduleName = "PracticeList"
+                  usesParentBreakpointCondition = "Yes"
+                  urlString = "file:///Users/kosuke-kihara/Desktop/PracticeList/Omikuji/OmikujiResult.swift"
+                  startingColumnNumber = "9223372036854775807"
+                  endingColumnNumber = "9223372036854775807"
+                  startingLineNumber = "16"
+                  endingLineNumber = "16"
+                  offsetFromSymbolStart = "107">
+               </Location>
+               <Location
+                  uuid = "D09C4EBF-4284-4F06-A257-A67B9A3788D2 - 386fdd6a66b6665c"
+                  shouldBeEnabled = "No"
+                  ignoreCount = "0"
+                  continueAfterRunningActions = "No"
+                  symbolName = "PracticeList.OmikujiResult.stage.setter : PracticeList.OmikujiResult.Stage"
+                  moduleName = "PracticeList"
+                  usesParentBreakpointCondition = "Yes"
+                  urlString = "file:///Users/kosuke-kihara/Desktop/PracticeList/Omikuji/OmikujiResult.swift"
+                  startingColumnNumber = "9223372036854775807"
+                  endingColumnNumber = "9223372036854775807"
+                  startingLineNumber = "16"
+                  endingLineNumber = "16"
+                  offsetFromSymbolStart = "120">
+               </Location>
+               <Location
+                  uuid = "D09C4EBF-4284-4F06-A257-A67B9A3788D2 - 3064705db479e2af"
+                  shouldBeEnabled = "No"
+                  ignoreCount = "0"
+                  continueAfterRunningActions = "No"
+                  symbolName = "PracticeList.OmikujiResult.stage.modify : PracticeList.OmikujiResult.Stage"
+                  moduleName = "PracticeList"
+                  usesParentBreakpointCondition = "Yes"
+                  urlString = "file:///Users/kosuke-kihara/Desktop/PracticeList/Omikuji/OmikujiResult.swift"
+                  startingColumnNumber = "9223372036854775807"
+                  endingColumnNumber = "9223372036854775807"
+                  startingLineNumber = "0"
+                  endingLineNumber = "0"
+                  offsetFromSymbolStart = "18">
+               </Location>
+               <Location
+                  uuid = "D09C4EBF-4284-4F06-A257-A67B9A3788D2 - 8cf26f72364237c9"
+                  shouldBeEnabled = "No"
+                  ignoreCount = "0"
+                  continueAfterRunningActions = "No"
+                  symbolName = "PracticeList.OmikujiResult.stage.modify : PracticeList.OmikujiResult.Stage with unmangled suffix &quot;.resume.0&quot;"
+                  moduleName = "PracticeList"
+                  usesParentBreakpointCondition = "Yes"
+                  urlString = "file:///Users/kosuke-kihara/Desktop/PracticeList/Omikuji/OmikujiResult.swift"
+                  startingColumnNumber = "9223372036854775807"
+                  endingColumnNumber = "9223372036854775807"
+                  startingLineNumber = "16"
+                  endingLineNumber = "16"
+                  offsetFromSymbolStart = "4">
+               </Location>
+               <Location
+                  uuid = "D09C4EBF-4284-4F06-A257-A67B9A3788D2 - e356838b3113704b"
+                  shouldBeEnabled = "No"
+                  ignoreCount = "0"
+                  continueAfterRunningActions = "No"
+                  symbolName = "PracticeList.OmikujiResult.init(nibName: Swift.Optional&lt;Swift.String&gt;, bundle: Swift.Optional&lt;__C.NSBundle&gt;) -&gt; PracticeList.OmikujiResult"
+                  moduleName = "PracticeList"
+                  usesParentBreakpointCondition = "Yes"
+                  urlString = "file:///Users/kosuke-kihara/Desktop/PracticeList/Omikuji/OmikujiResult.swift"
+                  startingColumnNumber = "9223372036854775807"
+                  endingColumnNumber = "9223372036854775807"
+                  startingLineNumber = "16"
+                  endingLineNumber = "16"
+                  offsetFromSymbolStart = "258">
+               </Location>
+               <Location
+                  uuid = "D09C4EBF-4284-4F06-A257-A67B9A3788D2 - 1c517a038755e37e"
+                  shouldBeEnabled = "No"
+                  ignoreCount = "0"
+                  continueAfterRunningActions = "No"
+                  symbolName = "PracticeList.OmikujiResult.init(coder: __C.NSCoder) -&gt; Swift.Optional&lt;PracticeList.OmikujiResult&gt;"
+                  moduleName = "PracticeList"
+                  usesParentBreakpointCondition = "Yes"
+                  urlString = "file:///Users/kosuke-kihara/Desktop/PracticeList/Omikuji/OmikujiResult.swift"
+                  startingColumnNumber = "9223372036854775807"
+                  endingColumnNumber = "9223372036854775807"
+                  startingLineNumber = "16"
+                  endingLineNumber = "16"
+                  offsetFromSymbolStart = "184">
+               </Location>
+            </Locations>
+         </BreakpointContent>
+      </BreakpointProxy>
+      <BreakpointProxy
+         BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
+         <BreakpointContent
+            uuid = "2D088287-A652-4FC6-987F-D81198D0631A"
+            shouldBeEnabled = "No"
+            ignoreCount = "0"
+            continueAfterRunningActions = "No"
+            filePath = "../../PracticeList/Omikuji/OmikujiResult.swift"
+            startingColumnNumber = "9223372036854775807"
+            endingColumnNumber = "9223372036854775807"
+            startingLineNumber = "18"
+            endingLineNumber = "18"
+            landmarkName = "viewDidLoad()"
+            landmarkType = "7">
+         </BreakpointContent>
+      </BreakpointProxy>
+      <BreakpointProxy
+         BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
+         <BreakpointContent
+            uuid = "B9852F87-A468-476C-8CDD-73ED6063ACEA"
+            shouldBeEnabled = "No"
+            ignoreCount = "0"
+            continueAfterRunningActions = "No"
+            filePath = "../../PracticeList/Omikuji/OmikujiResult.swift"
+            startingColumnNumber = "9223372036854775807"
+            endingColumnNumber = "9223372036854775807"
+            startingLineNumber = "19"
+            endingLineNumber = "19"
+            landmarkName = "viewDidLoad()"
+            landmarkType = "7">
+         </BreakpointContent>
+      </BreakpointProxy>
+      <BreakpointProxy
+         BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
+         <BreakpointContent
+            uuid = "71859C0B-EB8B-4989-B870-4D320A7BEEF3"
+            shouldBeEnabled = "No"
+            ignoreCount = "0"
+            continueAfterRunningActions = "No"
+            filePath = "../../PracticeList/Omikuji/OmikujiResult.swift"
+            startingColumnNumber = "9223372036854775807"
+            endingColumnNumber = "9223372036854775807"
+            startingLineNumber = "21"
+            endingLineNumber = "21"
+            landmarkName = "viewDidLoad()"
+            landmarkType = "7">
+         </BreakpointContent>
+      </BreakpointProxy>
+   </Breakpoints>
+</Bucket>
