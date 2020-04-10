@@ -13,46 +13,78 @@ class QiitaDetailViewController: UIViewController, WKNavigationDelegate, WKUIDel
     
     var url = "https://www.google.com/"
     
-    
-    @IBOutlet private weak var viewUnderWeb: UIView!
-
+    var progressView = UIProgressView()
+        
     @IBOutlet private weak var webView: WKWebView!
-
-    @IBOutlet private weak var progressBar: UIProgressView!
     
     override func viewDidLoad() {
         super.viewDidLoad()
         
-        webView.uiDelegate = self
-        webView.navigationDelegate = self
+        //監視の設定
+        self.webView.addObserver(self, forKeyPath: "loading", options: .new, context: nil)
+        self.webView.addObserver(self, forKeyPath: "estimatedProgress", options: .new, context: nil)
         
-        let urlString = url
-        let encodedUrlString = urlString.addingPercentEncoding(withAllowedCharacters:NSCharacterSet.urlQueryAllowed)
+        //プログレスバーを生成(NavigationBar下)
+        progressView = UIProgressView(frame: CGRect(x: 0, y: self.navigationController!.navigationBar.frame.size.height - 2, width: self.view.frame.size.width, height: 10))
+        progressView.progressViewStyle = .bar
         
-        let url = NSURL(string: encodedUrlString!)
-        let request = NSURLRequest(url: url! as URL)
+        self.navigationItem.title = "Title"
         
-        webView.load(request as URLRequest)
+        self.navigationController?.navigationBar.addSubview(progressView)
         
-        viewUnderWeb = webView
+        load(url: url)
         
-        // プログレスバー
-        progressBar.progress = 0.2// 進捗セット(0.0~1.0)
-        self.view.addSubview(progressBar)//viewに追加
+    }
+    
+    override func didReceiveMemoryWarning() {
+        super.didReceiveMemoryWarning()
+        // Dispose of any resources that can be recreated.
+    }
+    
+    override func observeValue(forKeyPath keyPath: String?, of object: Any?, change: [NSKeyValueChangeKey : Any]?, context: UnsafeMutableRawPointer?) {
+        if keyPath == "estimatedProgress"{
+            //estimatedProgressが変更されたときに、setProgressを使ってプログレスバーの値を変更する。
+            self.progressView.setProgress(Float(self.webView.estimatedProgress), animated: true)
+        }else if keyPath == "loading"{
+            UIApplication.shared.isNetworkActivityIndicatorVisible = self.webView.isLoading
+            if self.webView.isLoading {
+                self.progressView.setProgress(0.1, animated: true)
+            }else{
+                //読み込みが終わったら0に
+                self.progressView.setProgress(0.0, animated: false)
+            }
+        }
+    }
+    
+    private func load(url: String) {
+        // 表示するWEBサイトのURLを設定します。
+        let url = URL(string: url)
+        let urlRequest = URLRequest(url: url!)
+        // webViewで表示するWEBサイトの読み込みを開始します。
+        webView.load(urlRequest)
+    }
+    
+    deinit{
+        //監視の解除
+        self.webView.removeObserver(self, forKeyPath: "estimatedProgress")
+        self.webView.removeObserver(self, forKeyPath: "loading")
     }
     
     @IBAction private func redo(_ sender: Any) {
         webView.goBack()
     }
+    
     @IBAction private func undo(_ sender: Any) {
         webView.goForward()
     }
+    
     @IBAction private func actionButton(_ sender: Any) {
         let controller = UIActivityViewController(activityItems: [webView!], applicationActivities: nil)
         self.present(controller, animated: true, completion: nil)
     }
+    
     @IBAction private func refleshButton(_ sender: Any) {
         webView.reload()
     }
-    
+
 }
