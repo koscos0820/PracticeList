@@ -11,7 +11,7 @@ import UIKit
 
 class QiitaMainViewController: UIViewController, UITableViewDelegate, UITableViewDataSource {
 
-    @IBOutlet weak var topTableView: UITableView!
+    @IBOutlet private weak var topTableView: UITableView!
     
     let tableCells = ["Qiita"]
     let segueNames = ["toList"]
@@ -22,14 +22,11 @@ class QiitaMainViewController: UIViewController, UITableViewDelegate, UITableVie
         // Do any additional setup after loading the view.
         topTableView.delegate = self
         topTableView.dataSource = self
-        
         topTableView.register(UITableViewCell.self, forCellReuseIdentifier: cellIdentifier)
     }
 
-    
-    @IBAction func returnButton(_ sender: Any) {
+    @IBAction private func returnButton(_ sender: Any) {
         presentingViewController?.dismiss(animated: true, completion: nil)
-
     }
     
     func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
@@ -48,6 +45,5 @@ class QiitaMainViewController: UIViewController, UITableViewDelegate, UITableVie
         // 別の画面に遷移
         performSegue(withIdentifier: segueNames[indexPath.row], sender: nil)
     }
-
 
 }

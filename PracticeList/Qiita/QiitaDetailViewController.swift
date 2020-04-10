@@ -14,11 +14,11 @@ class QiitaDetailViewController: UIViewController, WKNavigationDelegate, WKUIDel
     var url = "https://www.google.com/"
     
     
-    @IBOutlet weak var viewUnderWeb: UIView!
+    @IBOutlet private weak var viewUnderWeb: UIView!
 
-    @IBOutlet weak var webView: WKWebView!
+    @IBOutlet private weak var webView: WKWebView!
 
-    @IBOutlet weak var progressBar: UIProgressView!
+    @IBOutlet private weak var progressBar: UIProgressView!
     
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -39,22 +39,19 @@ class QiitaDetailViewController: UIViewController, WKNavigationDelegate, WKUIDel
         // プログレスバー
         progressBar.progress = 0.2// 進捗セット(0.0~1.0)
         self.view.addSubview(progressBar)//viewに追加
-        
     }
     
-    
-
-    @IBAction func redo(_ sender: Any) {
+    @IBAction private func redo(_ sender: Any) {
         webView.goBack()
     }
-    @IBAction func undo(_ sender: Any) {
+    @IBAction private func undo(_ sender: Any) {
         webView.goForward()
     }
-    @IBAction func actionButton(_ sender: Any) {
+    @IBAction private func actionButton(_ sender: Any) {
         let controller = UIActivityViewController(activityItems: [webView!], applicationActivities: nil)
         self.present(controller, animated: true, completion: nil)
     }
-    @IBAction func refleshButton(_ sender: Any) {
+    @IBAction private func refleshButton(_ sender: Any) {
         webView.reload()
     }
     

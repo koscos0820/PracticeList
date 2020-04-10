@@ -6,48 +6,17 @@
 //  Copyright © 2020 kosuke kihara. All rights reserved.
 //
 
-
 import UIKit
 import Foundation
 
-struct QiitaViewModel {
-    
-    static func fetchArticle(completion: @escaping ([QiitaStruct]) -> Swift.Void) {
-        // json受け取り
-        let url = "https://qiita.com/api/v2/tags/swift/items"
-        
-        guard var urlComponents = URLComponents(string: url) else {return}
-        
-        urlComponents.queryItems = [
-            URLQueryItem(name: "per_page", value: "20"),
-        ]
-        
-        let task = URLSession.shared.dataTask(with: urlComponents.url!) {(data, response, error) in
-            
-            guard let jsonData = data else {return}
-            
-            do{
-                let articles = try JSONDecoder().decode([QiitaStruct].self, from: jsonData)
-                
-                completion(articles)
-                
-            } catch let jsonError{
-                print("error", jsonError)
-            }
-        }
-        task.resume()
-    }
-}
-
 class QiitaListViewController: UIViewController, UITableViewDelegate, UITableViewDataSource {
     
-    let listCells = ["aaa"]
-    let segueName = "toDetail"
-    let cellIdentifier = "MyCell"
+    private let segueName = "toDetail"
+    private let cellIdentifier = "MyCell"
     
     var articles: [QiitaStruct] = []
     
-    @IBOutlet weak var listTableView: UITableView!
+    @IBOutlet private weak var listTableView: UITableView!
     
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -56,7 +25,7 @@ class QiitaListViewController: UIViewController, UITableViewDelegate, UITableVie
         listTableView.dataSource = self
         listTableView.register(UITableViewCell.self, forCellReuseIdentifier: cellIdentifier)
         
-        QiitaViewModel.fetchArticle(completion: { (articles) in
+        QiitaViewModel().fetchArticle(completion: { (articles) in
             self.articles = articles
             DispatchQueue.main.async {
                 self.listTableView.reloadData()
@@ -72,19 +41,19 @@ class QiitaListViewController: UIViewController, UITableViewDelegate, UITableVie
         }
     }
     
-    
     func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
         return articles.count
     }
     
     func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
+        
         let cell = UITableViewCell(style: .subtitle, reuseIdentifier: cellIdentifier)
         let article = articles[indexPath.row]
         cell.textLabel?.text = article.title
         cell.detailTextLabel?.text = article.user.name
         
         // イメージの取得
-        if let urlString = article.user.profile_image_url as? String {
+        if let urlString = article.user.profile_image_url {
             let url = URL(string: urlString)
 
             do{
@@ -96,8 +65,6 @@ class QiitaListViewController: UIViewController, UITableViewDelegate, UITableVie
         } else {
             cell.imageView?.image = UIImage(named: "omikuji_daikichi") //nilの場合は固定画像表示
         }
-        
-
         return cell
     }
 
@@ -105,7 +72,7 @@ class QiitaListViewController: UIViewController, UITableViewDelegate, UITableVie
         // セルの選択を解除
         tableView.deselectRow(at: indexPath, animated: true)
         
-        var selectUrl = articles[indexPath.row].url
+        let selectUrl = articles[indexPath.row].url
         // 別の画面に遷移
         performSegue(withIdentifier: segueName, sender: selectUrl)
     }
