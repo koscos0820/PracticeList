@@ -11,63 +11,58 @@ import WebKit
 
 class QiitaDetailViewController: UIViewController, WKNavigationDelegate, WKUIDelegate {
     
-    var url = "https://www.google.com/"
+    var urlString = "https://www.google.com/"
     
-    var progressView = UIProgressView()
-        
+    private var progressView = UIProgressView(progressViewStyle: .bar)
+    
     @IBOutlet private weak var webView: WKWebView!
     
     override func viewDidLoad() {
         super.viewDidLoad()
         
-        //監視の設定
-        self.webView.addObserver(self, forKeyPath: "loading", options: .new, context: nil)
-        self.webView.addObserver(self, forKeyPath: "estimatedProgress", options: .new, context: nil)
-        
-        //プログレスバーを生成(NavigationBar下)
-        progressView = UIProgressView(frame: CGRect(x: 0, y: self.navigationController!.navigationBar.frame.size.height - 2, width: self.view.frame.size.width, height: 10))
-        progressView.progressViewStyle = .bar
-        
-        self.navigationItem.title = "Title"
-        
-        self.navigationController?.navigationBar.addSubview(progressView)
-        
-        load(url: url)
-        
+        guard let selectedUrl = URL(string: urlString) else { fatalError() }
+        webView.load(URLRequest(url: selectedUrl))
+        setupProgressView()
     }
     
-    override func didReceiveMemoryWarning() {
-        super.didReceiveMemoryWarning()
-        // Dispose of any resources that can be recreated.
-    }
-    
-    override func observeValue(forKeyPath keyPath: String?, of object: Any?, change: [NSKeyValueChangeKey : Any]?, context: UnsafeMutableRawPointer?) {
-        if keyPath == "estimatedProgress"{
-            //estimatedProgressが変更されたときに、setProgressを使ってプログレスバーの値を変更する。
-            self.progressView.setProgress(Float(self.webView.estimatedProgress), animated: true)
-        }else if keyPath == "loading"{
-            UIApplication.shared.isNetworkActivityIndicatorVisible = self.webView.isLoading
-            if self.webView.isLoading {
-                self.progressView.setProgress(0.1, animated: true)
-            }else{
-                //読み込みが終わったら0に
-                self.progressView.setProgress(0.0, animated: false)
+    override func observeValue(forKeyPath keyPath: String?, of object: Any?,
+                               change: [NSKeyValueChangeKey: Any]?, context: UnsafeMutableRawPointer?) {
+        guard let keyPath = keyPath else {
+            fatalError()
+        }
+        
+        switch keyPath {
+        case #keyPath(WKWebView.isLoading):
+            if webView.isLoading {
+                progressView.alpha = 1.0
+                progressView.setProgress(0.1, animated: true)
+            } else {
+                UIView.animate(withDuration: 0.3, animations: {
+                    self.progressView.alpha = 0.0
+                }, completion: { _ in
+                    self.progressView.setProgress(0.0, animated: false)
+                })
             }
+        case #keyPath(WKWebView.estimatedProgress):
+            self.progressView.setProgress(Float(webView.estimatedProgress), animated: true)
+        default:
+            break
         }
     }
     
-    private func load(url: String) {
-        // 表示するWEBサイトのURLを設定します。
-        let url = URL(string: url)
-        let urlRequest = URLRequest(url: url!)
-        // webViewで表示するWEBサイトの読み込みを開始します。
-        webView.load(urlRequest)
-    }
-    
-    deinit{
-        //監視の解除
-        self.webView.removeObserver(self, forKeyPath: "estimatedProgress")
-        self.webView.removeObserver(self, forKeyPath: "loading")
+    private func setupProgressView() {
+        guard let navigationBarH = navigationController?.navigationBar.frame.size.height else {
+            assertionFailure()
+            return
+        }
+        progressView = UIProgressView(frame: CGRect(x: 0.0,
+                                                    y: navigationBarH,
+                                                    width: self.view.frame.size.width,
+                                                    height: 0.0))
+        navigationController?.navigationBar.addSubview(progressView)
+        //変更を検知
+        webView.addObserver(self, forKeyPath: #keyPath(WKWebView.isLoading), options: .new, context: nil)
+        webView.addObserver(self, forKeyPath: #keyPath(WKWebView.estimatedProgress), options: .new, context: nil)
     }
     
     @IBAction private func redo(_ sender: Any) {
@@ -86,5 +81,5 @@ class QiitaDetailViewController: UIViewController, WKNavigationDelegate, WKUIDel
     @IBAction private func refleshButton(_ sender: Any) {
         webView.reload()
     }
-
+    
 }

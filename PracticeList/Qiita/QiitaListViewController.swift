@@ -37,7 +37,7 @@ class QiitaListViewController: UIViewController, UITableViewDelegate, UITableVie
     override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
         if segue.identifier == segueName {
             let detailObject = segue.destination as! QiitaDetailViewController
-            detailObject.url = sender as! String
+            detailObject.urlString = sender as! String
         }
     }
     
@@ -62,8 +62,6 @@ class QiitaListViewController: UIViewController, UITableViewDelegate, UITableVie
             } catch {
                 print("Error : Cat't get image")
             }
-        } else {
-            cell.imageView?.image = UIImage(named: "omikuji_daikichi") //nilの場合は固定画像表示
         }
         return cell
     }
