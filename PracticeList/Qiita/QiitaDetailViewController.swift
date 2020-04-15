@@ -20,16 +20,17 @@ class QiitaDetailViewController: UIViewController, WKNavigationDelegate, WKUIDel
     override func viewDidLoad() {
         super.viewDidLoad()
         
+        webView.uiDelegate = self
+        webView.navigationDelegate = self
         guard let selectedUrl = URL(string: urlString) else { fatalError() }
         webView.load(URLRequest(url: selectedUrl))
+        
         setupProgressView()
     }
     
     override func observeValue(forKeyPath keyPath: String?, of object: Any?,
                                change: [NSKeyValueChangeKey: Any]?, context: UnsafeMutableRawPointer?) {
-        guard let keyPath = keyPath else {
-            fatalError()
-        }
+        guard let keyPath = keyPath else { fatalError() }
         
         switch keyPath {
         case #keyPath(WKWebView.isLoading):
@@ -55,10 +56,10 @@ class QiitaDetailViewController: UIViewController, WKNavigationDelegate, WKUIDel
             assertionFailure()
             return
         }
-        progressView = UIProgressView(frame: CGRect(x: 0.0,
+        progressView = UIProgressView(frame: CGRect(x: 0,
                                                     y: navigationBarH,
                                                     width: self.view.frame.size.width,
-                                                    height: 0.0))
+                                                    height: 0))
         navigationController?.navigationBar.addSubview(progressView)
         //変更を検知
         webView.addObserver(self, forKeyPath: #keyPath(WKWebView.isLoading), options: .new, context: nil)
