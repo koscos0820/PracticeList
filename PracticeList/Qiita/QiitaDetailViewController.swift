@@ -20,12 +20,12 @@ class QiitaDetailViewController: UIViewController, WKNavigationDelegate, WKUIDel
     override func viewDidLoad() {
         super.viewDidLoad()
         
+        setupProgressView()
+        
         webView.uiDelegate = self
         webView.navigationDelegate = self
         guard let selectedUrl = URL(string: urlString) else { fatalError() }
         webView.load(URLRequest(url: selectedUrl))
-        
-        setupProgressView()
     }
     
     override func observeValue(forKeyPath keyPath: String?, of object: Any?,
@@ -52,10 +52,7 @@ class QiitaDetailViewController: UIViewController, WKNavigationDelegate, WKUIDel
     }
     
     private func setupProgressView() {
-        guard let navigationBarH = navigationController?.navigationBar.frame.size.height else {
-            assertionFailure()
-            return
-        }
+        guard let navigationBarH = navigationController?.navigationBar.frame.size.height else { fatalError() }
         progressView = UIProgressView(frame: CGRect(x: 0,
                                                     y: navigationBarH,
                                                     width: self.view.frame.size.width,
