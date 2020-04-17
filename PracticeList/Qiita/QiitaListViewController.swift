@@ -31,13 +31,13 @@ class QiitaListViewController: UIViewController, UITableViewDelegate, UITableVie
                 self.listTableView.reloadData()
             }
         })
-
     }
     
     override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
         if segue.identifier == segueName {
-            let detailObject = segue.destination as! QiitaDetailViewController
-            detailObject.urlString = sender as! String
+            guard let detailObject = segue.destination as? QiitaDetailViewController,
+                let selectedArticle = sender as? QiitaStruct else { fatalError() }
+            detailObject.selectedArticle = selectedArticle
         }
     }
     
@@ -51,7 +51,6 @@ class QiitaListViewController: UIViewController, UITableViewDelegate, UITableVie
         let article = articles[indexPath.row]
         cell.textLabel?.text = article.title
         cell.detailTextLabel?.text = article.user.name
-        
         // イメージの取得
         if let urlString = article.user.profile_image_url {
             let url = URL(string: urlString)
@@ -60,7 +59,7 @@ class QiitaListViewController: UIViewController, UITableViewDelegate, UITableVie
                 let imageData = try Data(contentsOf: url!)
                 cell.imageView?.image = UIImage(data: imageData)
             } catch {
-                print("Error : Cat't get image")
+                cell.imageView?.image = UIImage(named: "no_image_square")
             }
         }
         return cell
@@ -70,10 +69,9 @@ class QiitaListViewController: UIViewController, UITableViewDelegate, UITableVie
         // セルの選択を解除
         tableView.deselectRow(at: indexPath, animated: true)
         
-        let selectUrl = articles[indexPath.row].url
+        let selectedArticle = articles[indexPath.row]
         // 別の画面に遷移
-        performSegue(withIdentifier: segueName, sender: selectUrl)
+        performSegue(withIdentifier: segueName, sender: selectedArticle)
     }
-
 }
 

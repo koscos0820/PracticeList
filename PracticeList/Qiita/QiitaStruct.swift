@@ -9,11 +9,11 @@
 import UIKit
 
 struct QiitaStruct: Codable {
-    let rendered_body: String
-    let body: String
-    let coediting: Bool
-    let comments_count: Int
-    let created_at: String
+    let rendered_body: String?
+    let body: String?
+    let coediting: Bool?
+    let comments_count: Int?
+    let created_at: String?
     let group: GroupItem?
     
     struct GroupItem: Codable {
@@ -25,20 +25,14 @@ struct QiitaStruct: Codable {
         let url_name: String?
     }
     
-    let id: String
-    let likes_count: Int
-    let `private`: Bool
-    let reactions_count: Int
-//    let tags: TagItem
-//
-//    struct TagItem: Codable {
-//        let name: String?
-//        let versions: [String]?
-//    }
+    let id: String?
+    let likes_count: Int?
+    let `private`: Bool?
+    let reactions_count: Int?
     
-    let title: String
-    let updated_at: String
-    let url: String
+    let title: String?
+    let updated_at: String?
+    let url: String?
     let user: UserItem
     
     struct UserItem: Codable {
@@ -59,6 +53,4 @@ struct QiitaStruct: Codable {
         let twitter_screen_name: String?
         let website_url: String?
     }
-    
-//    let page_views_count: Int
 }

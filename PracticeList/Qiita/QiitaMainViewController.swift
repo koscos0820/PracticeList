@@ -13,9 +13,9 @@ class QiitaMainViewController: UIViewController, UITableViewDelegate, UITableVie
 
     @IBOutlet private weak var topTableView: UITableView!
     
-    let tableCells = ["Qiita"]
-    let segueNames = ["toList"]
-    let cellIdentifier = "TopCell"
+    private let tableCells = ["Qiita"]
+    private let segueNames = ["toList"]
+    private let cellIdentifier = "TopCell"
 
     override func viewDidLoad() {
         super.viewDidLoad()
