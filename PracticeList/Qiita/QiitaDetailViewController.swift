@@ -11,7 +11,7 @@ import WebKit
 
 class QiitaDetailViewController: UIViewController, WKNavigationDelegate, WKUIDelegate {
     
-    var urlString = "https://www.google.com/"
+    var selectedArticle: QiitaStruct?
     
     private var progressView = UIProgressView(progressViewStyle: .bar)
     
@@ -20,11 +20,13 @@ class QiitaDetailViewController: UIViewController, WKNavigationDelegate, WKUIDel
     override func viewDidLoad() {
         super.viewDidLoad()
         
+        guard let urlString = selectedArticle?.url,
+        let selectedUrl = URL(string: urlString) else { fatalError() }
+        
         setupProgressView()
         
         webView.uiDelegate = self
         webView.navigationDelegate = self
-        guard let selectedUrl = URL(string: urlString) else { fatalError() }
         webView.load(URLRequest(url: selectedUrl))
     }
     
@@ -72,12 +74,14 @@ class QiitaDetailViewController: UIViewController, WKNavigationDelegate, WKUIDel
     }
     
     @IBAction private func actionButton(_ sender: Any) {
-        let controller = UIActivityViewController(activityItems: [webView!], applicationActivities: nil)
+        guard let shareText = selectedArticle?.title,
+            let urlString = selectedArticle?.url,
+            let shareUrl = URL(string: urlString) else { fatalError() }
+        let controller = UIActivityViewController(activityItems: [shareText, shareUrl], applicationActivities: nil)
         self.present(controller, animated: true, completion: nil)
     }
     
     @IBAction private func refleshButton(_ sender: Any) {
         webView.reload()
     }
-    
 }
