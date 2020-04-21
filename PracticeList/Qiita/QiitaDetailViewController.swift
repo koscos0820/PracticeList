@@ -20,12 +20,13 @@ class QiitaDetailViewController: UIViewController, WKNavigationDelegate, WKUIDel
     override func viewDidLoad() {
         super.viewDidLoad()
         
+        guard let urlString = selectedArticle?.url,
+        let selectedUrl = URL(string: urlString) else { fatalError() }
+        
         setupProgressView()
         
         webView.uiDelegate = self
         webView.navigationDelegate = self
-        guard let urlString = selectedArticle?.url,
-            let selectedUrl = URL(string: urlString) else { fatalError() }
         webView.load(URLRequest(url: selectedUrl))
     }
     
