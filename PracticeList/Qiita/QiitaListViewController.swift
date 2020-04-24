@@ -8,6 +8,7 @@
 
 import UIKit
 import Foundation
+import SVProgressHUD
 
 class QiitaListViewController: UIViewController, UITableViewDelegate, UITableViewDataSource {
     
@@ -31,6 +32,11 @@ class QiitaListViewController: UIViewController, UITableViewDelegate, UITableVie
                 self.listTableView.reloadData()
             }
         })
+    }
+    
+    override func viewWillAppear(_ animated: Bool) {
+        super.viewWillAppear(true)
+        SVProgressHUD.show()
     }
     
     override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
