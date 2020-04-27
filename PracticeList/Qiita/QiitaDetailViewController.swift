@@ -21,7 +21,7 @@ class QiitaDetailViewController: UIViewController, WKNavigationDelegate, WKUIDel
         super.viewDidLoad()
         
         guard let urlString = selectedArticle?.url,
-        let selectedUrl = URL(string: urlString) else { fatalError() }
+            let selectedUrl = URL(string: urlString) else { fatalError() }
         
         setupProgressView()
         
