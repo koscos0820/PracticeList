@@ -19,12 +19,16 @@ struct QiitaViewModel {
         
         let task = URLSession.shared.dataTask(with: urlComponents.url!) { data, response, error in
             
-            guard let jsonData = data else { return }
+            guard let jsonData = data else {
+                SVProgressHUD.dismiss()
+                return
+            }
             
             do {
                 let articles = try JSONDecoder().decode([QiitaStruct].self, from: jsonData)
                 completion(articles)
             } catch let jsonError {
+                SVProgressHUD.dismiss()
                 print("error", jsonError)
             }
         }
