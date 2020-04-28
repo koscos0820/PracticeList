@@ -8,6 +8,7 @@
 
 import UIKit
 import Foundation
+import SVProgressHUD
 
 class QiitaListViewController: UIViewController, UITableViewDelegate, UITableViewDataSource {
     
@@ -24,11 +25,11 @@ class QiitaListViewController: UIViewController, UITableViewDelegate, UITableVie
         listTableView.delegate = self
         listTableView.dataSource = self
         listTableView.register(UITableViewCell.self, forCellReuseIdentifier: cellIdentifier)
-        
         QiitaViewModel().fetchArticle(completion: { (articles) in
             self.articles = articles
             DispatchQueue.main.async {
                 self.listTableView.reloadData()
+                SVProgressHUD.dismiss()
             }
         })
     }
@@ -54,7 +55,7 @@ class QiitaListViewController: UIViewController, UITableViewDelegate, UITableVie
         // イメージの取得
         if let urlString = article.user.profile_image_url {
             let url = URL(string: urlString)
-
+            
             do{
                 let imageData = try Data(contentsOf: url!)
                 cell.imageView?.image = UIImage(data: imageData)
@@ -64,7 +65,7 @@ class QiitaListViewController: UIViewController, UITableViewDelegate, UITableVie
         }
         return cell
     }
-
+    
     func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
         // セルの選択を解除
         tableView.deselectRow(at: indexPath, animated: true)

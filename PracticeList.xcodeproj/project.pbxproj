@@ -38,9 +38,13 @@
 		D69A43CE2421DBAA00E77C78 /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = D69A43CD2421DBAA00E77C78 /* SceneDelegate.swift */; };
 		D69A43D72421FBFD00E77C78 /* Tetoris.swift in Sources */ = {isa = PBXBuildFile; fileRef = D69A43D62421FBFD00E77C78 /* Tetoris.swift */; };
 		D69A43D92421FC0F00E77C78 /* Tetoris.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = D69A43D82421FC0F00E77C78 /* Tetoris.storyboard */; };
+		DF1B90F11FD6D94F0B008DB7 /* Pods_PracticeList.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 228C76271B645C2210E2E96D /* Pods_PracticeList.framework */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		228C76271B645C2210E2E96D /* Pods_PracticeList.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_PracticeList.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		7135CC4F6E6EF66E16E11BDE /* Pods-PracticeList.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-PracticeList.debug.xcconfig"; path = "Target Support Files/Pods-PracticeList/Pods-PracticeList.debug.xcconfig"; sourceTree = "<group>"; };
+		BC39D63EEEE9C1196BFCB9E4 /* Pods-PracticeList.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-PracticeList.release.xcconfig"; path = "Target Support Files/Pods-PracticeList/Pods-PracticeList.release.xcconfig"; sourceTree = "<group>"; };
 		D6731AFB243EDAA80086F91D /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		D6731B1D243F045B0086F91D /* QiitaViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = QiitaViewModel.swift; sourceTree = "<group>"; };
 		D68746A22433069A00531CD7 /* QiitaMain.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = QiitaMain.storyboard; sourceTree = "<group>"; };
@@ -81,12 +85,31 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				DF1B90F11FD6D94F0B008DB7 /* Pods_PracticeList.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		3C202CC5E73D6A9E56957F7C /* Pods */ = {
+			isa = PBXGroup;
+			children = (
+				7135CC4F6E6EF66E16E11BDE /* Pods-PracticeList.debug.xcconfig */,
+				BC39D63EEEE9C1196BFCB9E4 /* Pods-PracticeList.release.xcconfig */,
+			);
+			name = Pods;
+			path = Pods;
+			sourceTree = "<group>";
+		};
+		4917372B60F638123ECE14C9 /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				228C76271B645C2210E2E96D /* Pods_PracticeList.framework */,
+			);
+			name = Frameworks;
+			sourceTree = "<group>";
+		};
 		D68746A4243306B500531CD7 /* Qiita */ = {
 			isa = PBXGroup;
 			children = (
@@ -107,6 +130,8 @@
 			children = (
 				D69A43942421D9D500E77C78 /* PracticeList */,
 				D69A43932421D9D500E77C78 /* Products */,
+				3C202CC5E73D6A9E56957F7C /* Pods */,
+				4917372B60F638123ECE14C9 /* Frameworks */,
 			);
 			sourceTree = "<group>";
 		};
@@ -197,9 +222,11 @@
 			isa = PBXNativeTarget;
 			buildConfigurationList = D69A43A62421D9D600E77C78 /* Build configuration list for PBXNativeTarget "PracticeList" */;
 			buildPhases = (
+				A543FA01B2746D33209EA95E /* [CP] Check Pods Manifest.lock */,
 				D69A438E2421D9D500E77C78 /* Sources */,
 				D69A438F2421D9D500E77C78 /* Frameworks */,
 				D69A43902421D9D500E77C78 /* Resources */,
+				853C006675786B552FAA8EB8 /* [CP] Embed Pods Frameworks */,
 			);
 			buildRules = (
 			);
@@ -266,6 +293,48 @@
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXResourcesBuildPhase section */
+
+/* Begin PBXShellScriptBuildPhase section */
+		853C006675786B552FAA8EB8 /* [CP] Embed Pods Frameworks */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputFileListPaths = (
+				"${PODS_ROOT}/Target Support Files/Pods-PracticeList/Pods-PracticeList-frameworks-${CONFIGURATION}-input-files.xcfilelist",
+			);
+			name = "[CP] Embed Pods Frameworks";
+			outputFileListPaths = (
+				"${PODS_ROOT}/Target Support Files/Pods-PracticeList/Pods-PracticeList-frameworks-${CONFIGURATION}-output-files.xcfilelist",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${PODS_ROOT}/Target Support Files/Pods-PracticeList/Pods-PracticeList-frameworks.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+		A543FA01B2746D33209EA95E /* [CP] Check Pods Manifest.lock */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputFileListPaths = (
+			);
+			inputPaths = (
+				"${PODS_PODFILE_DIR_PATH}/Podfile.lock",
+				"${PODS_ROOT}/Manifest.lock",
+			);
+			name = "[CP] Check Pods Manifest.lock";
+			outputFileListPaths = (
+			);
+			outputPaths = (
+				"$(DERIVED_FILE_DIR)/Pods-PracticeList-checkManifestLockResult.txt",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "diff \"${PODS_PODFILE_DIR_PATH}/Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n# This output is used by Xcode 'outputs' to avoid re-running this script phase.\necho \"SUCCESS\" > \"${SCRIPT_OUTPUT_FILE_0}\"\n";
+			showEnvVarsInLog = 0;
+		};
+/* End PBXShellScriptBuildPhase section */
 
 /* Begin PBXSourcesBuildPhase section */
 		D69A438E2421D9D500E77C78 /* Sources */ = {
@@ -422,6 +491,7 @@
 		};
 		D69A43A72421D9D600E77C78 /* Debug */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = 7135CC4F6E6EF66E16E11BDE /* Pods-PracticeList.debug.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_STYLE = Automatic;
@@ -440,6 +510,7 @@
 		};
 		D69A43A82421D9D600E77C78 /* Release */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = BC39D63EEEE9C1196BFCB9E4 /* Pods-PracticeList.release.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_STYLE = Automatic;
