@@ -9,6 +9,7 @@
 import UIKit
 import Foundation
 import SVProgressHUD
+import Kingfisher
 
 class QiitaListViewController: UIViewController, UITableViewDelegate, UITableViewDataSource {
     
@@ -53,16 +54,20 @@ class QiitaListViewController: UIViewController, UITableViewDelegate, UITableVie
         cell.textLabel?.text = article.title
         cell.detailTextLabel?.text = article.user.name
         // イメージの取得
-        if let urlString = article.user.profile_image_url {
-            let url = URL(string: urlString)
-            
-            do{
-                let imageData = try Data(contentsOf: url!)
-                cell.imageView?.image = UIImage(data: imageData)
-            } catch {
-                cell.imageView?.image = UIImage(named: "no_image_square")
-            }
+        guard let urlString = article.user.profile_image_url else {
+            //            let url = URL(string: urlString)
+            cell.imageView?.image = UIImage(named: "no_image_square")
+            return cell
         }
+        
+        let imageView = UIImageView()
+        imageView.kf.setImage(with: URL(string: urlString))
+        //            if imageView.image == nil {
+        //                cell.imageView?.image = UIImage(named: "no_image_square")
+        //            } else {
+        cell.imageView?.image = imageView.image
+        //            }
+        
         return cell
     }
     
