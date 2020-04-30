@@ -53,20 +53,16 @@ class QiitaListViewController: UIViewController, UITableViewDelegate, UITableVie
         let article = articles[indexPath.row]
         cell.textLabel?.text = article.title
         cell.detailTextLabel?.text = article.user.name
+        
         // イメージの取得
         guard let urlString = article.user.profile_image_url else {
-            //            let url = URL(string: urlString)
             cell.imageView?.image = UIImage(named: "no_image_square")
             return cell
         }
         
         let imageView = UIImageView()
         imageView.kf.setImage(with: URL(string: urlString))
-        //            if imageView.image == nil {
-        //                cell.imageView?.image = UIImage(named: "no_image_square")
-        //            } else {
         cell.imageView?.image = imageView.image
-        //            }
         
         return cell
     }
