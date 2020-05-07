@@ -60,10 +60,11 @@ class QiitaListViewController: UIViewController, UITableViewDelegate, UITableVie
             return cell
         }
         
-        let imageView = UIImageView()
-        imageView.kf.setImage(with: URL(string: urlString))
-        cell.imageView?.image = imageView.image
-        
+        cell.imageView?.kf.setImage(with: URL(string: urlString),
+                                    completionHandler: { result in
+                        cell.layoutIfNeeded()
+                    }
+        )
         return cell
     }
     
