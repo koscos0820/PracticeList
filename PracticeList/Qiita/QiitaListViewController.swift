@@ -25,7 +25,7 @@ class QiitaListViewController: UIViewController, UITableViewDelegate, UITableVie
         
         listTableView.delegate = self
         listTableView.dataSource = self
-        listTableView.register(UITableViewCell.self, forCellReuseIdentifier: cellIdentifier)
+        listTableView.register(CustumTableViewCell.self, forCellReuseIdentifier: cellIdentifier)
         QiitaViewModel().fetchArticle(completion: { (articles) in
             self.articles = articles
             DispatchQueue.main.async {
@@ -49,7 +49,7 @@ class QiitaListViewController: UIViewController, UITableViewDelegate, UITableVie
     
     func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
         
-        let cell = UITableViewCell(style: .subtitle, reuseIdentifier: cellIdentifier)
+        let cell = CustumTableViewCell(style: .subtitle, reuseIdentifier: cellIdentifier)
         let article = articles[indexPath.row]
         cell.textLabel?.text = article.title
         cell.detailTextLabel?.text = article.user.name
@@ -62,7 +62,7 @@ class QiitaListViewController: UIViewController, UITableViewDelegate, UITableVie
         
         cell.imageView?.kf.setImage(with: URL(string: urlString),
                                     completionHandler: { result in
-                        cell.layoutIfNeeded()
+                        cell.setNeedsLayout()
                     }
         )
         return cell
@@ -76,5 +76,15 @@ class QiitaListViewController: UIViewController, UITableViewDelegate, UITableVie
         // 別の画面に遷移
         performSegue(withIdentifier: segueName, sender: selectedArticle)
     }
+}
+
+class CustumTableViewCell: UITableViewCell {
+    
+    override func prepareForReuse() {
+        super.prepareForReuse()
+        imageView?.kf.cancelDownloadTask()
+        imageView?.image = nil
+    }
+    
 }
 
