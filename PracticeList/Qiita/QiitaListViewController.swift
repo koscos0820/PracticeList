@@ -25,7 +25,7 @@ class QiitaListViewController: UIViewController, UITableViewDelegate, UITableVie
         
         listTableView.delegate = self
         listTableView.dataSource = self
-        listTableView.register(CustumTableViewCell.self, forCellReuseIdentifier: cellIdentifier)
+        listTableView.register(QiitaListCell.self, forCellReuseIdentifier: cellIdentifier)
         QiitaViewModel().fetchArticle(completion: { (articles) in
             self.articles = articles
             DispatchQueue.main.async {
@@ -49,7 +49,7 @@ class QiitaListViewController: UIViewController, UITableViewDelegate, UITableVie
     
     func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
         
-        let cell = CustumTableViewCell(style: .subtitle, reuseIdentifier: cellIdentifier)
+        let cell = QiitaListCell(style: .subtitle, reuseIdentifier: cellIdentifier)
         let article = articles[indexPath.row]
         cell.textLabel?.text = article.title
         cell.detailTextLabel?.text = article.user.name
@@ -78,13 +78,5 @@ class QiitaListViewController: UIViewController, UITableViewDelegate, UITableVie
     }
 }
 
-class CustumTableViewCell: UITableViewCell {
-    
-    override func prepareForReuse() {
-        super.prepareForReuse()
-        imageView?.kf.cancelDownloadTask()
-        imageView?.image = nil
-    }
-    
-}
+
 

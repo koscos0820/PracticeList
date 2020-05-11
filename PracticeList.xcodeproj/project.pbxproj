@@ -9,6 +9,7 @@
 /* Begin PBXBuildFile section */
 		D6731AFC243EDAA80086F91D /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = D6731AFB243EDAA80086F91D /* Assets.xcassets */; };
 		D6731B1E243F045B0086F91D /* QiitaViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = D6731B1D243F045B0086F91D /* QiitaViewModel.swift */; };
+		D67778EB24692F6300E9B59D /* QiitaListCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = D67778EA24692F6300E9B59D /* QiitaListCell.swift */; };
 		D68746A32433069A00531CD7 /* QiitaMain.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = D68746A22433069A00531CD7 /* QiitaMain.storyboard */; };
 		D68746A62433072800531CD7 /* QiitaMainViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = D68746A52433072800531CD7 /* QiitaMainViewController.swift */; };
 		D68746A824330D5100531CD7 /* QiitaList.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = D68746A724330D5100531CD7 /* QiitaList.storyboard */; };
@@ -48,6 +49,7 @@
 		BC39D63EEEE9C1196BFCB9E4 /* Pods-PracticeList.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-PracticeList.release.xcconfig"; path = "Target Support Files/Pods-PracticeList/Pods-PracticeList.release.xcconfig"; sourceTree = "<group>"; };
 		D6731AFB243EDAA80086F91D /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		D6731B1D243F045B0086F91D /* QiitaViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = QiitaViewModel.swift; sourceTree = "<group>"; };
+		D67778EA24692F6300E9B59D /* QiitaListCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = QiitaListCell.swift; sourceTree = "<group>"; };
 		D68746A22433069A00531CD7 /* QiitaMain.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = QiitaMain.storyboard; sourceTree = "<group>"; };
 		D68746A52433072800531CD7 /* QiitaMainViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = QiitaMainViewController.swift; sourceTree = "<group>"; };
 		D68746A724330D5100531CD7 /* QiitaList.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = QiitaList.storyboard; sourceTree = "<group>"; };
@@ -122,6 +124,7 @@
 				D68746A52433072800531CD7 /* QiitaMainViewController.swift */,
 				D68746A724330D5100531CD7 /* QiitaList.storyboard */,
 				D68746A92433114900531CD7 /* QiitaListViewController.swift */,
+				D67778EA24692F6300E9B59D /* QiitaListCell.swift */,
 				D68746AB2433131000531CD7 /* QiitaStruct.swift */,
 				D6731B1D243F045B0086F91D /* QiitaViewModel.swift */,
 				D68746AD2433206600531CD7 /* QiitaDetail.storyboard */,
@@ -367,6 +370,7 @@
 			files = (
 				D699C3F4242310E600298231 /* TetoView.swift in Sources */,
 				D69A43CC2421DB6700E77C78 /* AppDelegate.swift in Sources */,
+				D67778EB24692F6300E9B59D /* QiitaListCell.swift in Sources */,
 				D69A43B62421DAA900E77C78 /* OmikujiResult.swift in Sources */,
 				D69A43BB2421DAB600E77C78 /* KukuViewController.swift in Sources */,
 				D68746B02433208E00531CD7 /* QiitaDetailViewController.swift in Sources */,
