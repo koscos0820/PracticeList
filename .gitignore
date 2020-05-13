@@ -6,6 +6,9 @@
 
 ## User settings
 PracticeList.xcworkspace/xcuserdata/
+PracticeList.xcodeproj/xcuserdata/
+PracticeList.xcodeproj/project.xcworkspace/xcuserdata/
+
 ## Obj-C/Swift specific
 *.hmap
 
