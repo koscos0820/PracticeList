@@ -9,6 +9,7 @@
 import UIKit
 import Foundation
 import SVProgressHUD
+import Kingfisher
 
 class QiitaListViewController: UIViewController, UITableViewDelegate, UITableViewDataSource {
     
@@ -24,7 +25,7 @@ class QiitaListViewController: UIViewController, UITableViewDelegate, UITableVie
         
         listTableView.delegate = self
         listTableView.dataSource = self
-        listTableView.register(UITableViewCell.self, forCellReuseIdentifier: cellIdentifier)
+        listTableView.register(QiitaListCell.self, forCellReuseIdentifier: cellIdentifier)
         QiitaViewModel().fetchArticle(completion: { (articles) in
             self.articles = articles
             DispatchQueue.main.async {
@@ -48,21 +49,22 @@ class QiitaListViewController: UIViewController, UITableViewDelegate, UITableVie
     
     func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
         
-        let cell = UITableViewCell(style: .subtitle, reuseIdentifier: cellIdentifier)
+        let cell = QiitaListCell(style: .subtitle, reuseIdentifier: cellIdentifier)
         let article = articles[indexPath.row]
         cell.textLabel?.text = article.title
         cell.detailTextLabel?.text = article.user.name
+        
         // イメージの取得
-        if let urlString = article.user.profile_image_url {
-            let url = URL(string: urlString)
-            
-            do{
-                let imageData = try Data(contentsOf: url!)
-                cell.imageView?.image = UIImage(data: imageData)
-            } catch {
-                cell.imageView?.image = UIImage(named: "no_image_square")
-            }
+        guard let urlString = article.user.profile_image_url else {
+            cell.imageView?.image = UIImage(named: "no_image_square")
+            return cell
         }
+        
+        cell.imageView?.kf.setImage(with: URL(string: urlString),
+                                    completionHandler: { result in
+                        cell.setNeedsLayout()
+                    }
+        )
         return cell
     }
     
@@ -75,4 +77,6 @@ class QiitaListViewController: UIViewController, UITableViewDelegate, UITableVie
         performSegue(withIdentifier: segueName, sender: selectedArticle)
     }
 }
+
+
 

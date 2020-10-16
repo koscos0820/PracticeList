@@ -3,12 +3,13 @@
 	archiveVersion = 1;
 	classes = {
 	};
-	objectVersion = 50;
+	objectVersion = 51;
 	objects = {
 
 /* Begin PBXBuildFile section */
 		D6731AFC243EDAA80086F91D /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = D6731AFB243EDAA80086F91D /* Assets.xcassets */; };
 		D6731B1E243F045B0086F91D /* QiitaViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = D6731B1D243F045B0086F91D /* QiitaViewModel.swift */; };
+		D67778EB24692F6300E9B59D /* QiitaListCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = D67778EA24692F6300E9B59D /* QiitaListCell.swift */; };
 		D68746A32433069A00531CD7 /* QiitaMain.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = D68746A22433069A00531CD7 /* QiitaMain.storyboard */; };
 		D68746A62433072800531CD7 /* QiitaMainViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = D68746A52433072800531CD7 /* QiitaMainViewController.swift */; };
 		D68746A824330D5100531CD7 /* QiitaList.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = D68746A724330D5100531CD7 /* QiitaList.storyboard */; };
@@ -38,7 +39,8 @@
 		D69A43CE2421DBAA00E77C78 /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = D69A43CD2421DBAA00E77C78 /* SceneDelegate.swift */; };
 		D69A43D72421FBFD00E77C78 /* Tetoris.swift in Sources */ = {isa = PBXBuildFile; fileRef = D69A43D62421FBFD00E77C78 /* Tetoris.swift */; };
 		D69A43D92421FC0F00E77C78 /* Tetoris.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = D69A43D82421FC0F00E77C78 /* Tetoris.storyboard */; };
-		DF1B90F11FD6D94F0B008DB7 /* Pods_PracticeList.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 228C76271B645C2210E2E96D /* Pods_PracticeList.framework */; };
+		D6F1C1CC24582B7D009EB79E /* Kingfisher.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = D6F1C1CB24582B7D009EB79E /* Kingfisher.framework */; settings = {ATTRIBUTES = (Required, ); }; };
+		DF1B90F11FD6D94F0B008DB7 /* Pods_PracticeList.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 228C76271B645C2210E2E96D /* Pods_PracticeList.framework */; settings = {ATTRIBUTES = (Required, ); }; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -47,6 +49,7 @@
 		BC39D63EEEE9C1196BFCB9E4 /* Pods-PracticeList.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-PracticeList.release.xcconfig"; path = "Target Support Files/Pods-PracticeList/Pods-PracticeList.release.xcconfig"; sourceTree = "<group>"; };
 		D6731AFB243EDAA80086F91D /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		D6731B1D243F045B0086F91D /* QiitaViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = QiitaViewModel.swift; sourceTree = "<group>"; };
+		D67778EA24692F6300E9B59D /* QiitaListCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = QiitaListCell.swift; sourceTree = "<group>"; };
 		D68746A22433069A00531CD7 /* QiitaMain.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = QiitaMain.storyboard; sourceTree = "<group>"; };
 		D68746A52433072800531CD7 /* QiitaMainViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = QiitaMainViewController.swift; sourceTree = "<group>"; };
 		D68746A724330D5100531CD7 /* QiitaList.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = QiitaList.storyboard; sourceTree = "<group>"; };
@@ -78,6 +81,8 @@
 		D69A43CD2421DBAA00E77C78 /* SceneDelegate.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = SceneDelegate.swift; path = AtoZ/SceneDelegate.swift; sourceTree = "<group>"; };
 		D69A43D62421FBFD00E77C78 /* Tetoris.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Tetoris.swift; sourceTree = "<group>"; };
 		D69A43D82421FC0F00E77C78 /* Tetoris.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = Tetoris.storyboard; sourceTree = "<group>"; };
+		D6F1C1C924582B44009EB79E /* Carthage */ = {isa = PBXFileReference; lastKnownFileType = folder; path = Carthage; sourceTree = "<group>"; };
+		D6F1C1CB24582B7D009EB79E /* Kingfisher.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Kingfisher.framework; path = Carthage/Build/iOS/Kingfisher.framework; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -85,6 +90,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				D6F1C1CC24582B7D009EB79E /* Kingfisher.framework in Frameworks */,
 				DF1B90F11FD6D94F0B008DB7 /* Pods_PracticeList.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -98,13 +104,14 @@
 				7135CC4F6E6EF66E16E11BDE /* Pods-PracticeList.debug.xcconfig */,
 				BC39D63EEEE9C1196BFCB9E4 /* Pods-PracticeList.release.xcconfig */,
 			);
-			name = Pods;
 			path = Pods;
 			sourceTree = "<group>";
 		};
 		4917372B60F638123ECE14C9 /* Frameworks */ = {
 			isa = PBXGroup;
 			children = (
+				D6F1C1CB24582B7D009EB79E /* Kingfisher.framework */,
+				D6F1C1C924582B44009EB79E /* Carthage */,
 				228C76271B645C2210E2E96D /* Pods_PracticeList.framework */,
 			);
 			name = Frameworks;
@@ -117,8 +124,9 @@
 				D68746A52433072800531CD7 /* QiitaMainViewController.swift */,
 				D68746A724330D5100531CD7 /* QiitaList.storyboard */,
 				D68746A92433114900531CD7 /* QiitaListViewController.swift */,
-				D6731B1D243F045B0086F91D /* QiitaViewModel.swift */,
+				D67778EA24692F6300E9B59D /* QiitaListCell.swift */,
 				D68746AB2433131000531CD7 /* QiitaStruct.swift */,
+				D6731B1D243F045B0086F91D /* QiitaViewModel.swift */,
 				D68746AD2433206600531CD7 /* QiitaDetail.storyboard */,
 				D68746AF2433208E00531CD7 /* QiitaDetailViewController.swift */,
 			);
@@ -227,6 +235,7 @@
 				D69A438F2421D9D500E77C78 /* Frameworks */,
 				D69A43902421D9D500E77C78 /* Resources */,
 				853C006675786B552FAA8EB8 /* [CP] Embed Pods Frameworks */,
+				D6F1C1CD24582BC1009EB79E /* ShellScript */,
 			);
 			buildRules = (
 			);
@@ -334,6 +343,24 @@
 			shellScript = "diff \"${PODS_PODFILE_DIR_PATH}/Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n# This output is used by Xcode 'outputs' to avoid re-running this script phase.\necho \"SUCCESS\" > \"${SCRIPT_OUTPUT_FILE_0}\"\n";
 			showEnvVarsInLog = 0;
 		};
+		D6F1C1CD24582BC1009EB79E /* ShellScript */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputFileListPaths = (
+			);
+			inputPaths = (
+				"$(SRCROOT)/Carthage/Build/iOS/Kingfisher.framework",
+			);
+			outputFileListPaths = (
+			);
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "/usr/local/bin/carthage copy-frameworks\n";
+		};
 /* End PBXShellScriptBuildPhase section */
 
 /* Begin PBXSourcesBuildPhase section */
@@ -343,6 +370,7 @@
 			files = (
 				D699C3F4242310E600298231 /* TetoView.swift in Sources */,
 				D69A43CC2421DB6700E77C78 /* AppDelegate.swift in Sources */,
+				D67778EB24692F6300E9B59D /* QiitaListCell.swift in Sources */,
 				D69A43B62421DAA900E77C78 /* OmikujiResult.swift in Sources */,
 				D69A43BB2421DAB600E77C78 /* KukuViewController.swift in Sources */,
 				D68746B02433208E00531CD7 /* QiitaDetailViewController.swift in Sources */,
@@ -496,6 +524,10 @@
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_STYLE = Automatic;
 				DEVELOPMENT_TEAM = T22NZ4CB27;
+				FRAMEWORK_SEARCH_PATHS = (
+					"$(inherited)",
+					"$(PROJECT_DIR)/Carthage/Build/iOS",
+				);
 				INFOPLIST_FILE = PracticeList/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
@@ -515,6 +547,10 @@
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_STYLE = Automatic;
 				DEVELOPMENT_TEAM = T22NZ4CB27;
+				FRAMEWORK_SEARCH_PATHS = (
+					"$(inherited)",
+					"$(PROJECT_DIR)/Carthage/Build/iOS",
+				);
 				INFOPLIST_FILE = PracticeList/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
